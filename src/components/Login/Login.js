@@ -33,9 +33,9 @@ render(){
 						<h1>Create Account</h1>
 						
 						{/*---<span>or use your email for registration</span>---*/}
-						<input type="text" placeholder="Name" />
+						<input type="text" placeholder="Name" required/>
 						<input type="email" placeholder="Email" required/>
-						<input type="password" placeholder="Password" />
+						<input type="password" placeholder="Password" required />
 						<button>Sign Up</button>
 					</form>
 				</div>
@@ -44,8 +44,8 @@ render(){
 						<h1>Sign in</h1>
 						
 						{/*---<span>or use your account</span>---*/}
-						<input type="email" placeholder="Email" />
-						<input type="password" placeholder="Password" />
+						<input type="email" placeholder="Email" required/>
+						<input type="password" placeholder="Password" required/>
 						
 						<button>Sign In</button>
 					</form>
