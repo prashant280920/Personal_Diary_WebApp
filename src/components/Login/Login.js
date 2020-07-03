@@ -33,9 +33,10 @@ render(){
 						<h1>Create Account</h1>
 						
 						{/*---<span>or use your email for registration</span>---*/}
-						<input type="text" placeholder="Name" required/>
-						<input type="email" placeholder="Email" required/>
-						<input type="password" placeholder="Password" required />
+						<input className="w-100" type="text" placeholder="Name" required/>
+						<input className="w-100" type="email" placeholder="Email" required/>
+						<input className="w-100" type="password" placeholder="Password" required />
+						<input className="w-100" type="password" placeholder="Confirm Password" required />
 						<button>Sign Up</button>
 					</form>
 				</div>
@@ -44,8 +45,8 @@ render(){
 						<h1>Sign in</h1>
 						
 						{/*---<span>or use your account</span>---*/}
-						<input type="email" placeholder="Email" required/>
-						<input type="password" placeholder="Password" required/>
+						<input className="w-100" type="email" placeholder="Email" required/>
+						<input className="w-100" type="password" placeholder="Password" required/>
 						
 						<button>Sign In</button>
 					</form>
