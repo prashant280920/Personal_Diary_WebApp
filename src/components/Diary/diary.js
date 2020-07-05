@@ -11,6 +11,7 @@ class Diary extends React.Component {
 					<textarea id="qual"className="br3">Add Title</textarea>
 					<h2 className="H1">Dec 2, 2013</h2>
 					<h6 className="H2">---------------------------------------------------<div className="dib star">&#8902;</div>-------------------------------------------------------</h6> 
+					
 					<h6 className="H3">---------------------------------------------------<div className="dib star">&#8902;</div>-------------------------------------------------------</h6> 
 				</div>
 				<div className="dib w-30 h-100">

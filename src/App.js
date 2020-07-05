@@ -9,8 +9,7 @@ function App() {
   	// <Login />
   	<div className="App ">
   	  		<h1>Diary Name</h1>
-  	  	<div className="App w-100 ">
-  	     	
+  	  	<div className="App w-100 ">	
   	      <Diary />
   	      
   	     </div>
