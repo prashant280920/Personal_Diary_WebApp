@@ -1,9 +1,29 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Cabin+Sketch&family=Caveat&family=Dancing+Script:wght@562&family=Fredericka+the+Great&family=Great+Vibes&family=Homemade+Apple&family=Kalam:wght@300&family=Mr+De+Haviland&family=Nothing+You+Could+Do&family=Pinyon+Script&family=Rock+Salt&family=Tangerine:wght@700&family=Yellowtail&display=swap');
+*//*font-family: 'Alex Brush', cursive;
+font-family: 'Allura', cursive; ,chance
+font-family: 'Cabin Sketch', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Homemade Apple', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Mr De Haviland', cursive; Date
+font-family: 'Nothing You Could Do', cursive; ,chance
+font-family: 'Pinyon Script', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Tangerine', cursive;
+font-family: 'Yellowtail', cursive;*/
 #profile{
 	border:2px solid black;
 	height:90%;
 }
 #search-box{
 	height:10%;
+}
+#text{
+/*	background-color: black;*/
+	height:100%;
 }
 
 textarea{
@@ -12,32 +32,64 @@ textarea{
 	display:block;
 	position:relative;
 	resize:none;
-	    background-color: #f3f0e7;
-    background-image: linear-gradient(90deg, transparent 90%, #abced4 90%, #abced4 90.5%, transparent 90.5%), linear-gradient(#dcd9d7 0.05em, transparent .05em);
+	    background-color: #fafafa;
+    background-image: linear-gradient(90deg, transparent 90%, transparent 90.5%), linear-gradient(#dcd9d7 0.05em, transparent .05em);
     background-size: 100% 1.5em;
-padding-left:30px;
-padding-top:80px;
+padding-left:40px;
+padding-top:22px;
+padding:30px 40px 0px 44px;
+ font-family: 'Kalam', cursive !important;
+ font-weight:900;
+ border-radius:5px;
+ line-height: 1.5 !important;
+
+
 }
 
 textarea::first-line{
 	padding-top:20px;
-	background-color: blue;
-	font-size:30px;
+	color:#e63a58;
+	font-size:40px;
+	line-height: 2.5 !important;
+	font-family:'Allura', cursive;
+	word-spacing: 4px;
+	letter-spacing: 3px;
+
 }
 textarea:focus{
 	outline:none;
 }
  .H1 {
-
+ 	font-family: 'Allura', cursive;
+ 	/*word-spacing: 2px;
+ 	letter-spacing:3px;*/
+ 	color:#382722;
 	position:absolute;
 	top:100px;
-	left:10%;
+	right:55%;
+
 }
  .H2 {
-
+ 	font-family: 'Cabin Sketch', cursive;
 	position:absolute;
-	top:200px;
-	left:10%;
+	top:175px;
+	left:14%;
+	color:black;
+	font-stretch: expanded;
+	width:100%;
+}
+ .H3 {
+ 	font-family: 'Cabin Sketch', cursive;
+	position:absolute;
+	bottom:-70px;
+	left:14%;
+	color:black;
+	font-stretch: expanded;
+	width:100%;
+}
+.star{
+	height:20px;
+	font-size:20px;
 }
 
 input{
