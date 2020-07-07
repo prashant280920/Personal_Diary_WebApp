@@ -27,18 +27,20 @@ font-family: 'Yellowtail', cursive;*/
 	width:80%;
 	margin-bottom: 20px;
 }
-
+.textarea{
+	position:relative;
+}
 textarea{
 	height:100%;
 	width:100%;
 	display:block;
-	position:relative;
+	
 	resize:none;
 	    background-color: #fafafa;
     background-image: linear-gradient(90deg, transparent 90%, transparent 90.5%), linear-gradient(#dcd9d7 0.05em, transparent .05em);
     background-size: 100% 1.5em;
 
-padding:60px 40px 0px 44px;
+padding:70px 40px 0px 44px;
  font-family: 'Kalam', cursive !important;
  font-weight:900;
  border-radius:5px;
@@ -52,7 +54,7 @@ textarea::first-line{
 	
 	color:#e63a58;
 	font-size:40px;
-	line-height: 2.3 !important;
+	line-height: 2.7 !important;
 	font-family:'Allura', cursive;
 	word-spacing: 4px;
 	letter-spacing: 3px;
@@ -67,15 +69,15 @@ textarea:focus{
  	letter-spacing:3px;*/
  	color:#382722;
 	position:absolute;
-	top:130px;
-	left:14%;
+	top:4.5%;
+	left:5%;
 
 }
  .H2 {
  	font-family: 'Cabin Sketch', cursive;
 	position:absolute;
-	top:205px;
-	left:14%;
+	top:18%;
+	left:5%;
 	color:black;
 
 
@@ -83,7 +85,7 @@ textarea:focus{
  .H3 {
  	font-family: 'Cabin Sketch', cursive;
 	position:absolute;
-	bottom:-60px;
+	bottom:3%;
 	left:14%;
 	color:black;
 
@@ -94,18 +96,29 @@ textarea:focus{
  	letter-spacing:3px;*/
  	color:#382722;
 	position:absolute;
-	top:80px;
+	top:-3%;
 	left:17%;
 	font-size:35px;
 	transform: rotate(0deg);
 	opacity:0.2;
 	font-weight: 900;
 }
+#emoji {
+ 	
+ 	/*word-spacing: 2px;
+ 	letter-spacing:3px;*/
+ 	
+	position:absolute;
+	top:3%;
+	right:10%;
+	font-size: 50px;
+	font-weight: 900;
+}
 .H5{
  	font-family: 'Cabin Sketch', cursive;
 	position:absolute;
-	bottom:-77px;
-	left:13%;
+	bottom:0px;
+	left:5%;
 	color:black;
 	font-size:33px;
 	opacity:0.2;

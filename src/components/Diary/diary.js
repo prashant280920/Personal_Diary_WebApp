@@ -11,10 +11,11 @@ class Diary extends React.Component {
 					<textarea id="qual"className="br3" maxlength="1100">Add Title</textarea>
 					<h2 className="H1">Dec 2, 2013 -<div className="dib stylechar"> &#128448;</div><div className="dib styleletter"> No Food</div> <div className="dib stylechar">💭</div><div className="dib styleletter"> No Comment</div></h2>
 					<h3 className="H4">☁️<div className="dib cloud">☁️</div></h3>
+					<div id="emoji"><div className="emoji-click">😀</div></div>
 					<h6 className="H2">---------------------------------------------------<div className="dib star">{/*&#8902;&#128448;*/}	&#9734;</div>-------------------------------------------------------</h6> 
 					
 					<h6 className="H3">---------------------------------------------------<div className="dib star">&#8902;</div>-------------------------------------------------------</h6> 
-					<div className="H5">☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div></div>
+					<div className="H5">☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div>☁️<div className="dib cloud">☁️</div></div>
 				</div>
 				<div className="dib h-100 rightclm">
 					<div className="w-100 " id="search-box">
