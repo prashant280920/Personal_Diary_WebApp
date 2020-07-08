@@ -96,14 +96,14 @@ textarea:focus{
  	letter-spacing:3px;*/
  	color:#382722;
 	position:absolute;
-	top:-3%;
-	left:17%;
+	top:2%;
+	left:15%;
 	font-size:35px;
 	transform: rotate(0deg);
 	opacity:0.2;
 	font-weight: 900;
 }
-#emoji {
+#emoji-dropdown {
  	
  	/*word-spacing: 2px;
  	letter-spacing:3px;*/
@@ -165,4 +165,35 @@ input::placeholder{
 	font-weight: 700;
 	padding: 2px;
 	opacity:1;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  height:80px;
+  overflow: scroll;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content div{
+	display:inline;
+	margin-top:-10px;
+	font-size:20px;
+	padding:1px;
+
+}
+
+.dropdown-content span{
+	font-size:20px;
+		
+
+}
+.cld{
+	font-size:40px;
 }
