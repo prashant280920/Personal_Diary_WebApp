@@ -1,43 +1,79 @@
 import React from 'react';
 import Emoji from './Emoji.js';
 
-
 const EmojiList = () => {
+	 
 	const emoji = [
 		{
 			label:"cloud",
-			className:"",
-			symbol:"☁️"
+			className:"size",
+			symbol:"☁️",
+			onClick:function(e){
+				document.getElementById("qual").value = 
+				document.getElementById("qual").value+e.target.textContent; 
+				
+			}
+
 		},
 		{
 			label:"cloud",
 			className:"size",
-			symbol:"☁️"
+			symbol:"☁️",
+			onClick:function(e){
+				document.getElementById("qual").value = 
+				document.getElementById("qual").value+e.target.textContent; 
+				
+			}
 		},
 		{
 			label:"cloud",
 			className:"size",
-			symbol:"☁️"
+			symbol:"☁️",
+			onClick:function(e){
+				document.getElementById("qual").value = 
+				document.getElementById("qual").value+e.target.textContent; 
+				
+			}
 		},
 		{
 			label:"cloud",
 			className:"size",
-			symbol:"☁️"
+			symbol:"☁️",
+			onClick:function(e){
+				document.getElementById("qual").value = 
+				document.getElementById("qual").value+e.target.textContent; 
+				
+			}
 		},
 		{
 			label:"cloud",
 			className:"size",
-			symbol:"☁️"
+			symbol:"☁️",
+			onClick:function(e){
+				document.getElementById("qual").value = 
+				document.getElementById("qual").value+e.target.textContent; 
+				
+			}
 		},
 		{
 			label:"cloud",
 			className:"size",
-			symbol:"☁️"
+			symbol:"☁️",
+			onClick:function(e){
+				document.getElementById("qual").value = 
+				document.getElementById("qual").value+e.target.textContent; 
+				
+			}
 		},
 		{
 			label:"cloud",
 			className:"size",
-			symbol:"☁️"
+			symbol:"☁️",
+			onClick:function(e){
+				document.getElementById("qual").value = 
+				document.getElementById("qual").value+e.target.textContent; 
+				
+			}
 		}
 	]
 	return (
@@ -47,8 +83,10 @@ const EmojiList = () => {
 					<Emoji className={emoji[i].className}
 					symbol={emoji[i].symbol} 
 					label={emoji[i].label}
+					onClick={emoji[i].onClick}
 					 />);
-			})
+					}
+			)
 	   	}
 		</div>
 	);
