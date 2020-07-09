@@ -3,6 +3,7 @@ import './App.css';
 import Login from "./components/Login/Login.js";
 import Diary from "./components/Diary/diary.js";
 function App() {
+  
 	 document.getElementById("root").style="width:100%;height:100%;";
   return (
 
