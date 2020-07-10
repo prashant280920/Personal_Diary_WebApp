@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Personal_Diary_WebApp/static/css/main.373cb9ce.chunk.css",
-    "main.js": "/Personal_Diary_WebApp/static/js/main.f9bac7cf.chunk.js",
-    "main.js.map": "/Personal_Diary_WebApp/static/js/main.f9bac7cf.chunk.js.map",
+    "main.js": "/Personal_Diary_WebApp/static/js/main.8f804088.chunk.js",
+    "main.js.map": "/Personal_Diary_WebApp/static/js/main.8f804088.chunk.js.map",
     "runtime-main.js": "/Personal_Diary_WebApp/static/js/runtime-main.b1f0adbc.js",
     "runtime-main.js.map": "/Personal_Diary_WebApp/static/js/runtime-main.b1f0adbc.js.map",
     "static/css/2.3c03f26f.chunk.css": "/Personal_Diary_WebApp/static/css/2.3c03f26f.chunk.css",
     "static/js/2.990a12a4.chunk.js": "/Personal_Diary_WebApp/static/js/2.990a12a4.chunk.js",
     "static/js/2.990a12a4.chunk.js.map": "/Personal_Diary_WebApp/static/js/2.990a12a4.chunk.js.map",
     "index.html": "/Personal_Diary_WebApp/index.html",
-    "precache-manifest.3b224f5858abd7b0155e33eb0ea1d480.js": "/Personal_Diary_WebApp/precache-manifest.3b224f5858abd7b0155e33eb0ea1d480.js",
+    "precache-manifest.e3c91f14bc2746b5dc1ea4dd1dd195b3.js": "/Personal_Diary_WebApp/precache-manifest.e3c91f14bc2746b5dc1ea4dd1dd195b3.js",
     "service-worker.js": "/Personal_Diary_WebApp/service-worker.js",
     "static/css/2.3c03f26f.chunk.css.map": "/Personal_Diary_WebApp/static/css/2.3c03f26f.chunk.css.map",
     "static/css/main.373cb9ce.chunk.css.map": "/Personal_Diary_WebApp/static/css/main.373cb9ce.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.3c03f26f.chunk.css",
     "static/js/2.990a12a4.chunk.js",
     "static/css/main.373cb9ce.chunk.css",
-    "static/js/main.f9bac7cf.chunk.js"
+    "static/js/main.8f804088.chunk.js"
   ]
 }
