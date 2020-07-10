@@ -2,6 +2,7 @@ import React from 'react';
 import "./diary.css";
 import Emoji from ".././Emoji/Emoji.js";
 import EmojiList from ".././Emoji/EmojiList.js";
+import Profile from ".././Profile/Profile.js";
 
 class Diary extends React.Component {
 	 
@@ -10,7 +11,7 @@ class Diary extends React.Component {
 			<div className ="bg-black br3 pv4 pl4 pr0" id="text">
 				<div className="dib  h-100 mh1 w-60 textarea">
 				  
-					<textarea id="qual"className="br3" maxlength="1100">Add Title</textarea>
+					<textarea id="qual"className="br3" maxLength="1100" defaultValue="Add Title"></textarea>
 					<h2 className="H1">Dec 2, 2013 -<div className="dib stylechar"> &#128448;</div><div className="dib styleletter"> No Food</div><Emoji className="dib stylechar" symbol="💭" label="Comment" /> <div className="dib styleletter"> No Comment</div></h2>
 					<div className="H4"><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
 					<div id="emoji-dropdown"><div className="dropdown"> <Emoji className="dropbtn" symbol="😀" label="cloud" /><div className="dropdown-content">
@@ -27,7 +28,9 @@ class Diary extends React.Component {
 						<input type="search" placeholder="Enter Month" />
 
 					</div>	
-					<div className="bg-white br3 w-100" id="profile"></div>
+					<div className="bg-white br3 w-100" id="profile">
+						<Profile />
+					</div>
 				</div>
 			</div>
 		)

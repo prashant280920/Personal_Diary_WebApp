@@ -5,6 +5,7 @@ const EmojiList = () => {
 	 
 	const emoji = [
 		{
+			key:"1",
 			label:"cloud",
 			className:"size",
 			symbol:"☁️",
@@ -16,6 +17,7 @@ const EmojiList = () => {
 
 		},
 		{
+			key:"2",
 			label:"cloud",
 			className:"size",
 			symbol:"☁️",
@@ -26,6 +28,7 @@ const EmojiList = () => {
 			}
 		},
 		{
+			key:"3",
 			label:"cloud",
 			className:"size",
 			symbol:"☁️",
@@ -36,6 +39,7 @@ const EmojiList = () => {
 			}
 		},
 		{
+			key:"4",
 			label:"cloud",
 			className:"size",
 			symbol:"☁️",
@@ -46,6 +50,7 @@ const EmojiList = () => {
 			}
 		},
 		{
+			key:"5",
 			label:"cloud",
 			className:"size",
 			symbol:"☁️",
@@ -56,6 +61,7 @@ const EmojiList = () => {
 			}
 		},
 		{
+			key:"6",
 			label:"cloud",
 			className:"size",
 			symbol:"☁️",
@@ -66,6 +72,7 @@ const EmojiList = () => {
 			}
 		},
 		{
+			key:"7",
 			label:"cloud",
 			className:"size",
 			symbol:"☁️",
@@ -80,7 +87,8 @@ const EmojiList = () => {
 		<div>{
 	   		emoji.map((user,i) => {
 				return (
-					<Emoji className={emoji[i].className}
+					<Emoji key={emoji[i].key}
+					className={emoji[i].className}
 					symbol={emoji[i].symbol} 
 					label={emoji[i].label}
 					onClick={emoji[i].onClick}

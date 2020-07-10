@@ -6,7 +6,7 @@ const Emoji = props => (
         role="img"
         aria-label={props.label ? props.label : ""}
         aria-hidden={props.label ? "false" : "true"}
-        onClick={props.onClick ? props.onClick : ""}
+        onClick={props.onClick ? props.onClick : function(){}}
     >
         {props.symbol}
     </span>
