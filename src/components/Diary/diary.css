@@ -17,6 +17,7 @@ font-family: 'Yellowtail', cursive;*/
 #profile{
 	border:2px solid black;
 	height:90%;
+	overflow: hidden;
 }
 #search-box{
 	height:10%;
@@ -25,6 +26,7 @@ font-family: 'Yellowtail', cursive;*/
 /*	background-color: black;*/
 	height:100%;
 	width:80%;
+	padding-right:-10px;
 	margin-bottom: 20px;
 }
 .textarea{
