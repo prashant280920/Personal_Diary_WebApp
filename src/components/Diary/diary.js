@@ -5,7 +5,28 @@ import EmojiList from ".././Emoji/EmojiList.js";
 import Profile from ".././Profile/Profile.js";
 
 class Diary extends React.Component {
-	 
+	constructor(props){
+		super(props);
+		this.state = {
+			Month:1	,
+			Year:2020
+			}
+	}
+	onMonthChange = (e) => {
+		var a = e.target.value
+		console.log(a)
+		if (a <=12 && a>=1){
+			this.setState({Month:e.target.value-1})		
+		}
+	
+	}
+	 onYearChange = (e) => {
+		this.setState({Year:e.target.value-1})
+	}
+	 changeTheme = (e) => {
+	 	console.log(e.target.value)
+	 }
+
 	render(){
 		return (
 			<div className ="bg-black br3 pv4 pl4 pr0" id="text">
@@ -17,6 +38,7 @@ class Diary extends React.Component {
 					<div id="emoji-dropdown"><div className="dropdown"> <Emoji className="dropbtn" symbol="😀" label="cloud" /><div className="dropdown-content">
 						<EmojiList/>
 					</div></div></div>
+					{/*<button id="btt" onClick={this.changeTheme}>Hi</button>*/}
 					<h6 className="H2">---------------------------------------------------<div className="dib star">{/*&#8902;&#128448;*/}	&#9734;</div>-------------------------------------------------------</h6> 	
 					<h6 className="H3">---------------------------------------------------<div className="dib star">&#8902;</div>-------------------------------------------------------</h6> 
 					<div className="H5"><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
@@ -24,12 +46,14 @@ class Diary extends React.Component {
 				</div>
 				<div className="dib ml1 h-100 rightclm">
 					<div className="w-100 " id="search-box">
-						<input type="search" placeholder="Enter Year" />
-						<input type="search" placeholder="Enter Month" />
+						<label style={{color:"white"}}>Enter Month</label>
+						<label style={{color:"white"}}>Enter Year</label>
+						<input type="number" max="12" min="1" defaultValue="2" onChange={this.onMonthChange} />
+						<input type="number"  max="2020" min="2000" defaultValue="2020" onChange={this.onYearChange}/>
 
 					</div>	
 					<div className="bg-white br3 w-100" id="profile">
-						<Profile />
+						<Profile Month={this.state.Month} Year={this.state.Year}/>
 					</div>
 				</div>
 			</div>

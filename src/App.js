@@ -2,21 +2,32 @@ import React from 'react';
 import './App.css';
 import Login from "./components/Login/Login.js";
 import Diary from "./components/Diary/diary.js";
-function App() {
+import $ from "jquery";
+class App extends React.Component{
   
-	 document.getElementById("root").style="width:100%;height:100%;";
-  return (
+ 
+   
 
-  	// <Login />
-  	<div className="full ">
+  
+    componentDidMount(){
+      document.getElementById("root").style="width:100%;height:100%;";
+    }
+	 // 
+   render(){
+      return (
+
+    // <Login />
+    <div className="full ">
         <div className="center diaryname">
-  	  		<h1>Diary Name</h1>
+          <h1>Diary Name</h1>
         </div>
-  	  	<div className="App  w-100 ">	
-  	      <Diary />
-  	     </div>
-  	</div>
-  );
+        <div className="App  w-100 "> 
+          <Diary changeTheme={this.changeTheme} />
+         </div>
+    </div>
+  );  
+   }
+  
 }
 
 export default App;

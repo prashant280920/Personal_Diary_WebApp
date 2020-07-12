@@ -150,7 +150,10 @@ textarea:focus{
 }
 input{
 	width:40%;
-
+	font-family:'Cabin Sketch', cursive;
+font-weight: 700;
+text-align: center;
+height:20px;
 	color:#613c2b;
 	font-size:15px;
 	margin:10px 10px 5px 20px!important;
@@ -158,15 +161,11 @@ input{
 	border-radius:2px;
 	background:url("https://www.pixeden.com/media/k2/galleries/220/003-wood-melamine-subttle-pattern-background-pat.jpg");
 }
-input::placeholder{
-	font-family:'Cabin Sketch', cursive;
-	padding:auto;
-	color:#613c2b;
-	font-size:15px;
-	font-weight: 700;
-	padding: 2px;
-	opacity:1;
+label{
+	margin-left: 30px;
+	margin-right:80px;
 }
+
 .dropbtn{
 	font-size:20px;
 }
