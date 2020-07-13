@@ -10,10 +10,14 @@ class App extends React.Component{
 
   
     componentDidMount(){
-      document.getElementById("root").style="width:100%;height:100%;";
-    }
+      
+       document.getElementById("root").style="width:100%;height:100%;";
+     
+     }
+     
 	 // 
    render(){
+    console.log("rerender")
       return (
 
     // <Login />
