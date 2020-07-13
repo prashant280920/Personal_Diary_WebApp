@@ -39,5 +39,21 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      //const a =document.getElementsByClassName("hi")
+     //for (var i=0;i<a.length;i++){
+      //console.log(a[i])
+     //a[i].addEventListener('click',() => {
+      //console.log("hi")
+     //})
+    //}
+    function trying(){
+      console.log(this.event.target.textContent)
+      var b = document.getElementsByClassName("H1")[0].innerHTML
+      var c = b.replace(b[4],this.event.target.textContent)
+      document.getElementsByClassName("H1")[0].innerHTML = c;
+     
+    }
+    </script>>
   </body>
 </html>
