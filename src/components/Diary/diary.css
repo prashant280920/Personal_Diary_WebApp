@@ -51,7 +51,9 @@ padding:70px 40px 0px 44px;
 
 
 }
-
+.textarea-Dark{
+	background-color:#2b2221;
+}
 textarea::first-line{
 	
 	color:#e63a58;
@@ -74,15 +76,19 @@ textarea:focus{
 	top:4.5%;
 	left:5%;
 
+
 }
+.H1-Dark{ 
+	color: #82c4e0; }
  .H2 {
  	font-family: 'Cabin Sketch', cursive;
 	position:absolute;
 	top:18%;
 	left:5%;
 	color:black;
-
-
+}
+.H2-Dark{
+	color:yellow;
 }
  .H3 {
  	font-family: 'Cabin Sketch', cursive;
@@ -90,7 +96,9 @@ textarea:focus{
 	bottom:3%;
 	left:14%;
 	color:black;
-
+}
+.H3-Dark{
+	color:yellow;
 }
 .H4 {
  	font-family: 'Allura', cursive;
@@ -121,7 +129,7 @@ textarea:focus{
 	bottom:0px;
 	left:5%;
 	color:black;
-	font-size:33px;
+	font-size:63px;
 	opacity:0.2;
 
 }
@@ -165,7 +173,6 @@ label{
 	margin-left: 30px;
 	margin-right:80px;
 }
-
 .dropbtn{
 	font-size:20px;
 }
@@ -226,4 +233,13 @@ label{
 }
 .size:hover{
 	background-color: grey;
+}
+.profiles{
+	background-color: #dadbbf;
+
+
+}
+.profiles-dark{
+	background-color: #202f36;
+
 }
