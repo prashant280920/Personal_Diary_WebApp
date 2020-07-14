@@ -68,7 +68,7 @@ textarea:focus{
 	outline:none;
 }
  .H1 {
- 	font-family: 'Allura', cursive;
+ 	font-family: 'Alex Brush', cursive;
  	/*word-spacing: 2px;
  	letter-spacing:3px;*/
  	color:#382722;
@@ -235,11 +235,33 @@ label{
 	background-color: grey;
 }
 .profiles{
-	background-color: #dadbbf;
+	/*background-color: #dadbbf;*/
 
 
 }
 .profiles-dark{
 	background-color: #202f36;
+
+}
+#profile{
+	 background-color: #fafafa;
+    background-image: linear-gradient(90deg, transparent 90%, transparent 90.5%), linear-gradient(#dcd9d7 0.05em, transparent .05em);
+    background-size: 100% 2em;
+}
+.Date{
+	font-family: 'Cabin Sketch', cursive;
+	font-weight: 800;
+	font-size:25px;
+	border-bottom: 5px solid black;
+	padding-bottom: 20px;
+	
+}
+.Date_disabled{
+	font-family: 'Cabin Sketch', cursive;
+	font-weight: 800;
+	font-size:25px;
+	color:#7f7272;
+	border-bottom: 5px solid #7f7272;
+	padding-bottom: 20px;
 
 }

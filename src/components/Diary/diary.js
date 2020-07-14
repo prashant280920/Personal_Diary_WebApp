@@ -16,6 +16,7 @@ class Diary extends React.Component {
 			}
 	}
 	monthInText = (value) => {
+		console.log("hi")
 		var text = ["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
 		return(text[value])
 	} 
@@ -32,10 +33,10 @@ class Diary extends React.Component {
 	 onYearChange = (e) => {
 		this.setState({Year:parseInt(e.target.value)})
 	}
-	 changeTheme = (e) => {
-	 	 $("button" ).on("click", function() {
+	 changeTheme = () => {
+	 	
   console.log("Ka Ho")
-  if ($("button").text()=="Light Mode"){
+  if ($("button").text()==="Light Mode"){
     console.log("hi");
     $( ".H1" ).addClass( "H1-Dark" );
     $( ".H2" ).addClass( "H2-Dark" );
@@ -54,7 +55,7 @@ class Diary extends React.Component {
     $( ".profiles" ).removeClass( "profiles-dark" );
     console.log("Na ho")
   }
-});
+
 
 	 }
 
@@ -72,7 +73,7 @@ class Diary extends React.Component {
 					<div id="emoji-dropdown"><div className="dropdown"> <Emoji className="dropbtn" symbol="😀" label="cloud" /><div className="dropdown-content">
 						<EmojiList/>
 					</div></div></div>
-					<button id="btt" onClick={this.changeTheme}>Light Mode</button>
+					{/*<button id="btt" onClick={this.changeTheme}>Light Mode</button>*/}
 					<h6 className="H2">---------------------------------------------------<div className="dib star">{/*&#8902;&#128448;*/}	&#9734;</div>-------------------------------------------------------</h6> 	
 					<h6 className="H3">---------------------------------------------------<div className="dib star">&#8902;</div>-------------------------------------------------------</h6> 
 					<div className="H5"><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
