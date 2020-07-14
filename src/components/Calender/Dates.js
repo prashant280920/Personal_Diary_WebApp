@@ -90,18 +90,18 @@ const Dates = ({ Month, Year }) => {
 			
 			
 			if (Year<a.getFullYear() || Month<a.getMonth()+1){
-				t+=('<div class="bg-light-green dib br3 grow pa1 ma1 tc" onclick="trying()" style="height:30px;width:11%;">'+ i+'</div>')	
+				t+=('<div class="Date dib  grow-large pointer br2 ma1 tc" onclick="trying()" style="height:30px;width:11%;">'+ i+'</div>')	
 				console.log("first")
 			}else if (Year === a.getFullYear() && Month === a.getMonth()+1){
 				if (i<=a.getDate()){
-					t+=('<div class="bg-light-green dib br3 grow pa1 ma1 tc" onclick="trying()" style="height:30px;width:11%;">'+ i+'</div>')
+					t+=('<div class="Date dib  grow-large br2 pointer ma1 mb0 tc" onclick="trying()" style="height:30px;width:11%;">'+ i+'</div>')
 					console.log(2,1)
 				}else{
-					t+=('<div class="bg-red dib br3 grow pa1 ma1 tc" style="height:30px;width:11%;">'+ i+'</div>')
+					t+=('<div class="Date_disabled dib br2  ma1 tc" style="height:30px;width:11%;">'+ i+'</div>')
 					console.log(2,2)
 				}
 			}else if (Year === a.getFullYear() && Month > a.getMonth()+1){
-				t+=('<div class="bg-red dib br3 grow pa1 ma1 tc" style="height:30px;width:11%;">'+ i+'</div>')
+				t+=('<div class="Date_disabled dib br2  ma1 mb0 tc" style="height:30px;width:11%;">'+ i+'</div>')
 				console.log(3)
 			}
 			
