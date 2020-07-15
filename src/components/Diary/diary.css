@@ -14,6 +14,12 @@ font-family: 'Pinyon Script', cursive;
 font-family: 'Rock Salt', cursive;
 font-family: 'Tangerine', cursive;
 font-family: 'Yellowtail', cursive;*/
+.p-cal{
+	color:#e63a58;
+	font-family: 'Kalam', cursive;
+	margin-left:20px !important;
+	font-weight: 800;
+}
 #profile{
 	border:2px solid black;
 	height:90%;
@@ -249,16 +255,16 @@ label{
     background-size: 100% 2em;
 }
 .Date{
-	font-family: 'Cabin Sketch', cursive;
-	font-weight: 800;
+	font-family: 'Fredericka the Great', cursive;
+	font-weight: 600;
 	font-size:25px;
 	border-bottom: 5px solid black;
 	padding-bottom: 20px;
 	
 }
 .Date_disabled{
-	font-family: 'Cabin Sketch', cursive;
-	font-weight: 800;
+	font-family: 'Fredericka the Great', cursive;
+	font-weight: 600;
 	font-size:25px;
 	color:#7f7272;
 	border-bottom: 5px solid #7f7272;
