@@ -14,6 +14,93 @@ font-family: 'Pinyon Script', cursive;
 font-family: 'Rock Salt', cursive;
 font-family: 'Tangerine', cursive;
 font-family: 'Yellowtail', cursive;*/
+.mood{
+	font-size:30px;
+	font-weight: 900;
+	-moz-osx-font-smoothing: grayscale;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+   /* transform: translateZ( 0 );
+    transition: transform .25s ease-in-out;*/
+
+}
+.moodBox p{
+	font-weight: 500;
+	font-family:'Kalam', cursive;
+	transition: transform .25s ease-in-out;
+}
+.moodBox:hover p{
+	transform: scale(1.5);
+	font-weight:600;
+}
+.moodBox:hover .happy{
+	color:#fb6800;
+}
+.forhappy{
+	color:#fb6800;
+	font-weight: 600 !important;
+	font-size:20px;
+
+}
+.moodBox:hover .sad{
+	color:#5479a5;
+}
+.forsad{
+	color:#5479a5;
+	font-weight: 600 !important;
+	font-size:20px;
+}
+.moodBox:hover .angry{
+	color:red;
+}
+.forangry{
+	color:red;
+	font-weight: 600 !important;
+	font-size:20px;
+
+}
+.moodBox:hover .lovely{
+	color:#e70ecc;
+}
+.forlovely{
+	color:#e70ecc;
+	font-weight: 600 !important;
+	font-size:20px;
+
+}
+.moodBox:hover .awful{
+	color:#0aaf42;
+}
+.forawful{
+	color:#0aaf42;
+	font-weight: 600 !important;
+	font-size:20px;
+
+}
+#help{
+	font-size:;
+	font-weight:600;
+}
+/*.mood:hover{
+	backface-visibility: hidden;
+    transform: scale( 2.0);
+   
+}*/
+.moodBox{
+	height:100%;
+	width:15%;
+	display:inline-block;
+	
+	margin-top:10px;
+	margin-left:10px !important;
+}
+.p-feel{
+	color:#e63a58;
+	font-family: 'Kalam', cursive;
+	margin-left:20px !important;
+	font-weight: 800;
+	padding-top:0px;
+}
 .p-cal{
 	color:#e63a58;
 	font-family: 'Kalam', cursive;
@@ -24,6 +111,9 @@ font-family: 'Yellowtail', cursive;*/
 	border:2px solid black;
 	height:90%;
 	overflow: hidden;
+	 /*background-color: #fafafa;
+    background-image: linear-gradient(90deg, transparent 90%, transparent 90.5%), linear-gradient(#dcd9d7 0.05em, transparent .05em);
+    background-size: 100% 2em;*/
 }
 #search-box{
 	height:10%;
@@ -92,6 +182,7 @@ textarea:focus{
 	top:18%;
 	left:5%;
 	color:black;
+
 }
 .H2-Dark{
 	color:yellow;
@@ -250,9 +341,7 @@ label{
 
 }
 #profile{
-	 background-color: #fafafa;
-    background-image: linear-gradient(90deg, transparent 90%, transparent 90.5%), linear-gradient(#dcd9d7 0.05em, transparent .05em);
-    background-size: 100% 2em;
+	
 }
 .Date{
 	font-family: 'Fredericka the Great', cursive;
