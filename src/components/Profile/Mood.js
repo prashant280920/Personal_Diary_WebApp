@@ -26,11 +26,11 @@ class Mood extends React.Component {
 			return (
 			<div className="" style={{height:"20%",width:"100%",margin:"0px"}}>
 				
-				<div className="moodBox grow-large center" onClick={this.size}><div className="mood " >😊</div><p onClick={this.size} className="happy">Happy</p></div>
-				<div className="moodBox grow-large center" onClick={this.size}><div className="mood " >😔</div><p onClick={this.size} className="sad">Sad</p></div>
-				<div className="moodBox grow-large center" onClick={this.size}><div className="mood " >😡</div><p onClick={this.size} className="angry">Angry</p></div>
-				<div className="moodBox grow-large center" onClick={this.size}><div className="mood " >🥰</div><p onClick={this.size} className="lovely">Lovely</p></div>
-				<div className="moodBox grow-large center" onClick={this.size}><div className="mood " >🤢</div><p onClick={this.size} className="awful">Awful</p></div>
+				<div className="moodBox pointer grow-large center" onClick={this.size}><div className="mood " >😊</div><p onClick={this.size} className="happy">Happy</p></div>
+				<div className="moodBox pointer grow-large center" onClick={this.size}><div className="mood " >😔</div><p onClick={this.size} className="sad">Sad</p></div>
+				<div className="moodBox pointer grow-large center" onClick={this.size}><div className="mood " >😡</div><p onClick={this.size} className="angry">Angry</p></div>
+				<div className="moodBox pointer grow-large center" onClick={this.size}><div className="mood " >🥰</div><p onClick={this.size} className="lovely">Lovely</p></div>
+				<div className="moodBox pointer grow-large center" onClick={this.size}><div className="mood " >🤢</div><p onClick={this.size} className="awful">Awful</p></div>
 				
 			</div>
 		);		
