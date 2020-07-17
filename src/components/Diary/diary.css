@@ -184,6 +184,21 @@ textarea:focus{
 	color:black;
 
 }
+#favorite{
+	position:absolute;
+	top:5%;
+	left:93%;
+	color:black;
+	font-weight: 900;
+	font-size:30px;	
+	transition: transform .25s ease-in-out;
+}
+#favorite:hover{
+	transform:scale(1.5);
+}
+.fav{
+	background-color:yellow;
+}
 .H2-Dark{
 	color:yellow;
 }
@@ -216,8 +231,8 @@ textarea:focus{
  	letter-spacing:3px;*/
  	
 	position:absolute;
-	top:25%;
-	right:5%;
+	top:12%;
+	right:3%;
 	
 }
 .H5{

@@ -48,7 +48,8 @@
      //})
     //}
     function trying(){
-      console.log(this.event.target.textContent)
+      console.log(this.event.target.classList.value)
+      var fav = this.event.target.classList.value
       var date = this.event.target.textContent
       if (date.length === 1){
         date = "0"+date
@@ -56,8 +57,16 @@
       var b = document.getElementsByClassName("H1")[0].innerHTML
       var c = b.replace(b.slice(4,6),date)
       document.getElementsByClassName("H1")[0].innerHTML = c;
-     
+     var star = document.getElementById("favorite");
+     if(fav.includes("fav")){
+      star.textContent = "⭐";
+      star.style.left="92%";
+     }else{
+      star.textContent = "☆";
+      star.style.left="93%";
+     }
     }
+
     </script>>
   </body>
 </html>
