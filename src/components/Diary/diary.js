@@ -28,13 +28,23 @@ class Diary extends React.Component {
 		if (a <=12 && a>=1){
 			this.setState({Month:parseInt(e.target.value)})
 			var month = document.getElementsByClassName("H1")[0].innerHTML
-			 var c = month.replace(month.slice(0,3),this.monthInText(this.state.Month));
-			 document.getElementsByClassName("H1")[0].innerHTML = c;
+			console.log("check",this.state.Month,this.monthInText(this.state.Month))
+			 var c = month.replace(month.slice(0,3),this.monthInText(a));
+			  
+      var c = c.replace(c.slice(4,6),"01")
+      document.getElementsByClassName("H1")[0].innerHTML = c;
+      var star = document.getElementById("favorite");
+      star.textContent= "☆";
+      star.style.left="93%";
+      star.title="Add Favorite";
+
+     
 		}
 	
 	}
 	 onYearChange = (e) => {
 	 	console.log("year")
+
 		this.setState({Year:parseInt(e.target.value)})
 
 		var year = document.getElementsByClassName("H1")[0].innerHTML
@@ -42,7 +52,10 @@ class Diary extends React.Component {
 			 document.getElementsByClassName("H1")[0].innerHTML = c;
 	}
 	changeFavSymbol = (e) => {
-    var content = e.target.textContent;
+		console.log("yes",this.state.Month,new Date().getMonth()+1,this.state.Month <= (new Date().getMonth()),this.state.Year,new Date().getFullYear(),this.state.Year <=new Date().getYear())
+	if (this.state.Month <= (new Date().getMonth()+1) && this.state.Year <=new Date().getFullYear() ){
+		console.log("yo")
+		var content = e.target.textContent;
     var date = document.getElementsByClassName("H1")[0].innerHTML.slice(4,6);
     if (date[0]==="0"){
         date = date[1];
@@ -63,6 +76,9 @@ class Diary extends React.Component {
       e.target.title="Add Favorite";
        document.getElementById(date).classList.remove("fav")
     }
+		
+	}
+    
     
   }
 	 
@@ -99,7 +115,7 @@ class Diary extends React.Component {
 				<div className="dib  h-100 mh1 w-60 textarea">
 
 				  
-					<textarea id="qual"className="br3" maxLength="1100" defaultValue="Add Title"></textarea>
+					<textarea id="qual"className="br3" maxLength="1100" >Add Title</textarea>
 
 					<h2 className="H1">{`${this.monthInText(this.state.Month)}`} 01, {`${this.state.Year}`} -<div className="dib stylechar"> &#128448;</div><div className="dib styleletter"> No Food</div><Emoji className="dib stylechar" symbol="💭" label="Comment" /> <div className="dib styleletter"> No Comment</div></h2>
 					<div className="H4"><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
