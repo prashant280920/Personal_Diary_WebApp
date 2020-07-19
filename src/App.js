@@ -20,10 +20,10 @@ class App extends React.Component{
     console.log("rerender")
       return (
 
-    // <Login />
+     // <Login />
     <div className="full ">
         <div className="center diaryname">
-          <h1>Diary Name</h1>
+          <h1 id="name">Diary Name</h1>
         </div>
         <div className="App  w-100 "> 
           <Diary changeTheme={this.changeTheme} />
