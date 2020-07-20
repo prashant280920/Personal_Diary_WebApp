@@ -2,7 +2,7 @@ import React from 'react';
 import Emoji from ".././Emoji/Emoji.js";
 import Ravi from "./images/Ravi.png"
 import Prashant from "./images/Prashant.JPG"
-import { SocialIcon } from 'react-social-icons';
+
 
 
 const About = () => {
