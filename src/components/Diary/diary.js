@@ -4,6 +4,7 @@ import Emoji from ".././Emoji/Emoji.js";
 import EmojiList from ".././Emoji/EmojiList.js";
 import Profile from ".././Profile/Profile.js";
 import Setting from ".././Setting/Setting.js";
+import About from ".././About/About.js";
 import $ from 'jquery';
 import 'tachyons';
 
@@ -11,7 +12,7 @@ class Diary extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			animate:false,		
+			newRoute:"profile",		
 			Month:new Date().getMonth()+1,
 			Year:new Date().getFullYear()
 			}
@@ -84,9 +85,22 @@ class Diary extends React.Component {
   }
   animate = () => {
   	console.log("working")
-  	this.setState({animate:true})
+  	this.setState({newRoute:"setting"})
 
   }
+  about = () => {
+	this.setState({newRoute:"about"})
+
+  }
+   mouseOverImage = () => {
+        var img = document.getElementsByClassName("imgChange")[0];
+        img.textContent = "📖";
+       }
+
+    mouseOutImage = () => {
+        var img = document.getElementsByClassName("imgChange")[0];
+        img.textContent = "📘";
+       }
 	 
 	changeTheme = () => {
 	 	
@@ -125,7 +139,7 @@ class Diary extends React.Component {
 
 					<h2 className="H1">{`${this.monthInText(this.state.Month)}`} 01, {`${this.state.Year}`} -<div className="dib stylechar"> &#128448;</div><div className="dib styleletter"> No Food</div><Emoji className="dib stylechar" symbol="💭" label="Comment" /> <div className="dib styleletter"> No Comment</div></h2>
 					<div className="H4"><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
-					<div id="emoji-dropdown" className="pointer"><div title="Add Emoji"  className="dropdown"> <Emoji className="dropbtn" symbol="😀" label="smiley" /><div className="dropdown-content">
+					<div id="emoji-dropdown" className="pointer"><div  className="dropdown"> <Emoji className="dropbtn" title="Add Emoji" symbol="😀" label="smiley" /><div className="dropdown-content">
 						<EmojiList/>
 					</div></div></div>
 					{/*<button id="btt" onClick={this.animate}>Light Mode</button>*/}
@@ -143,9 +157,11 @@ class Diary extends React.Component {
 
 					</div>	
 					<div className="bg-white br3 w-100" id="profile">
-						{ this.state.animate === false
-							?<Profile Month={this.state.Month} Year={this.state.Year} rightClmChange={this.animate}/>	
-							:<Setting />	
+						{ this.state.newRoute === "profile"
+							?<Profile Month={this.state.Month} Year={this.state.Year} rightClmChange={this.animate} mouseOverImage={this.mouseOverImage} mouseOutImage={this.mouseOutImage} aboutChange={this.about}/>	
+							: (this.state.newRoute === "setting" )
+							?<Setting />
+							: <About />
 						
 
 						}
