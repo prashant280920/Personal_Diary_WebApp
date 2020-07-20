@@ -48,5 +48,6 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RaviKumar7870/Personal_Diary_WebApp/issues"
-  }
+  },
+  "devDependencies": {}
 }
