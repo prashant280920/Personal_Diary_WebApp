@@ -49,5 +49,7 @@
   "bugs": {
     "url": "https://github.com/RaviKumar7870/Personal_Diary_WebApp/issues"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "react-social-icons": "^4.1.0"
+  }
 }
