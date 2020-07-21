@@ -83,6 +83,9 @@ class Diary extends React.Component {
     
     
   }
+  onBack = () => {
+  	this.setState({newRoute:"profile"})
+  }
   animate = () => {
   	console.log("working")
   	this.setState({newRoute:"setting"})
@@ -160,8 +163,8 @@ class Diary extends React.Component {
 						{ this.state.newRoute === "profile"
 							?<Profile Month={this.state.Month} Year={this.state.Year} rightClmChange={this.animate} mouseOverImage={this.mouseOverImage} mouseOutImage={this.mouseOutImage} aboutChange={this.about}/>	
 							: (this.state.newRoute === "setting" )
-							?<Setting />
-							: <About />
+							?<Setting onBack={this.onBack}/>
+							: <About onBack={this.onBack} />
 						
 
 						}

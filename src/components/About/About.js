@@ -3,13 +3,24 @@ import Emoji from ".././Emoji/Emoji.js";
 import Ravi from "./images/Ravi.png"
 import Prashant from "./images/Prashant.JPG";
 import { SocialIcon } from 'react-social-icons';
+import { TiArrowBackOutline} from "react-icons/ti";
+import { TiArrowBack} from "react-icons/ti";
+import { IconContext } from "react-icons";
 
 
-
-const About = () => {
+const About = (props) => {
 	
 		return (
 			<div id="setting" className="  pa2  profiles" style={{height:"100%",width:"100%",margin:"0px"}}>
+				
+				<IconContext.Provider value={{  className: " pointer back" }}>
+				  <div className="back-container" onClick={props.onBack}>
+				    <TiArrowBack />
+				    <p>Back</p>
+				  </div>
+				</IconContext.Provider>
+				
+				
 				<h1 className="about-head center"><u>Diary App Developers</u></h1>
 				<div className="about-container">
 					<div className="center pa2 mb3 partner">

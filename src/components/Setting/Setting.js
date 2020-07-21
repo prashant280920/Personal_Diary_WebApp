@@ -1,11 +1,19 @@
 import React from 'react';
 import Emoji from ".././Emoji/Emoji.js";
 import Women from "./Avatar_images/Women.png";
+import { TiArrowBack} from "react-icons/ti";
+import { IconContext } from "react-icons";
 
-const Setting = () => {
+const Setting = (props) => {
 	
 		return (
 		<div id="setting" className="  pa2  profiles" style={{height:"100%",width:"100%",margin:"0px"}}>
+			<IconContext.Provider value={{  className: " pointer back" }}>
+				  <div className="back-container" onClick={props.onBack}>
+				    <TiArrowBack />
+				    <p>Back</p>
+				  </div>
+				</IconContext.Provider>
 			<h1 className="set-head center"><Emoji className="set-ico" symbol="🛠️🔧" label="setting" /><u>Setting</u><Emoji className="set-ico" symbol="🛠️🔧" label="setting" /></h1>
 			<h3 className="set-text">Change Avatar</h3>
 			<div className="center Avatar-container">
