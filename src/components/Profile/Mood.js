@@ -1,4 +1,5 @@
 import React from 'react';
+import Emoji from ".././Emoji/Emoji.js";
 
 class Mood extends React.Component {
 	constructor(){
@@ -26,11 +27,11 @@ class Mood extends React.Component {
 			return (
 			<div className="" style={{height:"20%",width:"100%",margin:"0px"}}>
 				
-				<div className="moodBox pointer grow-large center" onClick={this.size}><div className="mood " >😊</div><p onClick={this.size} className="happy">Happy</p></div>
-				<div className="moodBox pointer grow-large center" onClick={this.size}><div className="mood " >😔</div><p onClick={this.size} className="sad">Sad</p></div>
-				<div className="moodBox pointer grow-large center" onClick={this.size}><div className="mood " >😡</div><p onClick={this.size} className="angry">Angry</p></div>
-				<div className="moodBox pointer grow-large center" onClick={this.size}><div className="mood " >🥰</div><p onClick={this.size} className="lovely">Lovely</p></div>
-				<div className="moodBox pointer grow-large center" onClick={this.size}><div className="mood " >🤢</div><p onClick={this.size} className="awful">Awful</p></div>
+				<div className="moodBox pointer grow-large center" onClick={this.size}><Emoji className="mood" symbol="😊" label="happy" /><p onClick={this.size} className="happy">Happy</p></div>
+				<div className="moodBox pointer grow-large center" onClick={this.size}><Emoji className="mood" symbol="😔" label="sad" /><p onClick={this.size} className="sad">Sad</p></div>
+				<div className="moodBox pointer grow-large center" onClick={this.size}><Emoji className="mood" symbol="😡" label="angry" /><p onClick={this.size} className="angry">Angry</p></div>
+				<div className="moodBox pointer grow-large center" onClick={this.size}><Emoji className="mood" symbol="🥰" label="lovely" /><p onClick={this.size} className="lovely">Lovely</p></div>
+				<div className="moodBox pointer grow-large center" onClick={this.size}><Emoji className="mood" symbol="🤢" label="awful" /><p onClick={this.size} className="awful">Awful</p></div>
 				
 			</div>
 		);		

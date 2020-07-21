@@ -33,7 +33,7 @@ class Diary extends React.Component {
 			console.log("check",this.state.Month,this.monthInText(this.state.Month))
 			 var c = month.replace(month.slice(0,3),this.monthInText(a));
 			  
-      var c = c.replace(c.slice(4,6),"01")
+      c = c.replace(c.slice(4,6),"01")
       document.getElementsByClassName("H1")[0].innerHTML = c;
       var star = document.getElementById("favorite");
       star.textContent= "☆";
