@@ -20,6 +20,7 @@ font-family: 'Yellowtail', cursive;*/
 	width: 100px;
 	background-color: red;
 }*/
+
 .back-container{
 	position:absolute;
 	top:2%;
@@ -103,18 +104,29 @@ svg{
 	font-weight: 500;
 	font-family: 'Rock Salt', cursive;
 }
+#myAvatar{
+	width:40%;
+	height:180px;
+	border:2px solid black;
+	margin-top:15px;
+	border-radius:50%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
 .p-feel{
 	color:#e63a58;
 	font-family: 'Kalam', cursive;
 	margin-left:20px !important;
 	font-weight: 800;
 	padding-top:0px;
+	margin:0px;
 }
 .p-cal{
 	color:#e63a58;
 	font-family: 'Kalam', cursive;
 	margin-left:20px !important;
 	font-weight: 800;
+	margin:0px;
 }
 #profile{
 	border:2px solid black;
@@ -496,26 +508,39 @@ label{
 	margin-left:10px !important;
 }
 .Avatar-container{
-	height:20%;
-	width:100%;
-	overflow-y: scroll;
-
+	height:22%;
+	width:85%;
+	overflow: auto;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	white-space: nowrap;
 
 }
 .Avatar{
-	height:100%;
-	width:18%;
+	height:90%;
+	width:23.8%;
 	margin:2px;
+	border:2px solid black;
+	padding:2px;
+	/*width: 250px;*/
+ 
+}
+.Avatar-container .active, .Avatar:hover{
+	border:2px solid #e10f2c;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
 }
 .Avatar img{
-	border:2px solid black;
+
+	
 }
+.
 .diaryName{
 	background-color: #eee ;
 	border: none ;
 	padding: 12px 15px ;
 	margin: 8px 8px ;
-	width: 60% ;
+	width: 30% ;
 	border-radius:15px;
 
 }

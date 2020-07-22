@@ -7,6 +7,8 @@ import Setting from ".././Setting/Setting.js";
 import About from ".././About/About.js";
 import $ from 'jquery';
 import 'tachyons';
+import Women from "../Setting/Avatar_images/Women.png";
+import Men from "../Setting/Avatar_images/Men.png";
 
 class Diary extends React.Component {
 	constructor(props){
@@ -14,7 +16,8 @@ class Diary extends React.Component {
 		this.state = {
 			newRoute:"profile",		
 			Month:new Date().getMonth()+1,
-			Year:new Date().getFullYear()
+			Year:new Date().getFullYear(),
+			Avatar:Men
 			}
 	}
 	monthInText = (value) => {
@@ -104,6 +107,37 @@ class Diary extends React.Component {
         var img = document.getElementsByClassName("imgChange")[0];
         img.textContent = "📘";
        }
+    avatarSelection = (e) => {
+    	
+  		if (e.target.classList.value.includes("Avatar")){
+  			var current = document.getElementsByClassName("Avatar active");
+  			if(current[0]){
+  					current[0].className = current[0].className.replace(" active", "");
+  			e.target.classList.add("active")
+  			this.setState({Avatar:Women})	
+  			}else{
+  				e.target.parentNode.classList.add("active")	
+  					this.setState({Avatar:Women})
+  			}
+    		
+  		}else{
+  			var current = document.getElementsByClassName("Avatar active");
+  			console.log(current)
+  			if(current[0]){
+  				current[0].className = current[0].className.replace(" active", "");
+  				e.target.parentNode.classList.add("active")	
+  				this.setState({Avatar:Women})	
+  			}else{
+  					e.target.parentNode.classList.add("active")	
+  					this.setState({Avatar:Women})
+  			}
+
+    		
+  		}
+  		
+  	
+  	}
+
 	 
 	changeTheme = () => {
 	 	
@@ -132,7 +166,7 @@ class Diary extends React.Component {
 	 }
 
 	render(){
-		
+
 		return (
 			<div className ="bg-black br3 pv4 pl4 pr0" id="text">
 				<div className="dib  h-100 mh1 w-60 textarea">
@@ -148,7 +182,8 @@ class Diary extends React.Component {
 					{/*<button id="btt" onClick={this.animate}>Light Mode</button>*/}
 					<h6 className="H2">---------------------------------------------------<div className="dib star">{/*&#8902;&#128448;*/}	&#9734;</div>-------------------------------------------------------</h6> 	
 					<h6 className="H3">---------------------------------------------------<div className="dib star">&#8902;</div>-------------------------------------------------------</h6> 
-					<div className="H5"><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
+					<div className="H5">
+							<Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
 					<span id='favorite' title="Add Favorite" className="pointer" onClick={this.changeFavSymbol}  role="img" aria-label="">☆</span>
 				</div>
 				<div className="dib ml1 h-100 rightclm">
@@ -161,9 +196,9 @@ class Diary extends React.Component {
 					</div>	
 					<div className="bg-white br3 w-100" id="profile">
 						{ this.state.newRoute === "profile"
-							?<Profile Month={this.state.Month} Year={this.state.Year} rightClmChange={this.animate} mouseOverImage={this.mouseOverImage} mouseOutImage={this.mouseOutImage} aboutChange={this.about}/>	
+							?<Profile Avatar={this.state.Avatar} Month={this.state.Month} Year={this.state.Year} rightClmChange={this.animate} mouseOverImage={this.mouseOverImage} mouseOutImage={this.mouseOutImage} aboutChange={this.about}/>	
 							: (this.state.newRoute === "setting" )
-							?<Setting onBack={this.onBack}/>
+							?<Setting onBack={this.onBack} avatarSelection={this.avatarSelection}/>
 							: <About onBack={this.onBack} />
 						
 

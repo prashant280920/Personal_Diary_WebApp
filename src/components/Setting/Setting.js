@@ -1,6 +1,7 @@
 import React from 'react';
 import Emoji from ".././Emoji/Emoji.js";
 import Women from "./Avatar_images/Women.png";
+import Men from "./Avatar_images/Men.png";
 import { TiArrowBack} from "react-icons/ti";
 import { IconContext } from "react-icons";
 
@@ -17,35 +18,31 @@ const Setting = (props) => {
 			<h1 className="set-head center"><Emoji className="set-ico" symbol="🛠️🔧" label="setting" /><u>Setting</u><Emoji className="set-ico" symbol="🛠️🔧" label="setting" /></h1>
 			<h3 className="set-text">Change Avatar</h3>
 			<div className="center Avatar-container">
-				<div className=" Avatar dib grow pointer">
-					<img src={Women} className="br2" alt="Women Avatar"/>
-					<h4 style={{margin:"0px"}} > Women </h4>
+				<div className="Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
+					<img src={Men} className="" alt="Men Avatar"/>
+					<h4 style={{margin:"0px"}} > Men </h4>
 				</div>
-				<div className=" Avatar dib grow pointer">
-					<img src={Women} className="br2" alt="Women Avatar"/>
-					<h4 style={{margin:"0px"}}> Women </h4>
-				</div>
-				<div className=" Avatar dib grow pointer">
+				<div className="Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Women} className="br2" alt="Women Avatar"/>
 					<h4 style={{margin:"0px"}}> Women </h4>
 				</div>
-				<div className=" Avatar dib grow pointer">
+				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Women} className="br2" alt="Women Avatar"/>
 					<h4 style={{margin:"0px"}}> Women </h4>
 				</div>
-				<div className=" Avatar dib grow pointer">
+				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Women} className="br2" alt="Women Avatar"/>
 					<h4 style={{margin:"0px"}}> Women </h4>
 				</div>
-				<div className=" Avatar dib grow pointer">
+				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Women} className="br2" alt="Women Avatar"/>
 					<h4 style={{margin:"0px"}}> Women </h4>
 				</div>
-				<div className=" Avatar dib grow pointer">
+				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Women} className="br2" alt="Women Avatar"/>
 					<h4 style={{margin:"0px"}}> Women </h4>
 				</div>
-				<div className=" Avatar dib grow pointer">
+				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Women} className="br2" alt="Women Avatar"/>
 					<h4 style={{margin:"0px"}}> Women </h4>
 				</div>
