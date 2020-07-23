@@ -534,40 +534,84 @@ label{
 
 	
 }
-.
 .diaryName{
+	width:70%;
+}
+
+.diaryName input{
 	background-color: #eee ;
-	border: none ;
+	border:2px solid black;
 	padding: 12px 15px ;
 	margin: 8px 8px ;
-	width: 30% ;
-	border-radius:15px;
-
-}
-.diaryName:focus{
-	outline:none;
-}
-.diaryName::placeholder{
+	width: 7	0% !important;
+	border-radius:2px;
 	text-align: center;
 	font-family:  'Rock Salt', cursive;
+	
 }
+.diaryName input:focus{
+	/*outline:none;*/
+	text-align: center;
+	/*font-size:20px;*/
+	font-family:  'Rock Salt', cursive;
+}
+.diaryName input::placeholder{
+	text-align: center;
+	font-size:15px;
+	font-family:  'Rock Salt', cursive;
+}
+
 .text-container{
-	width:100%;
-	height:20%;
-}
-.box{
-	width:10%;
-	height:30%;
+	width:97%;
+	height:13%;
 	margin:5px;
 	
 
 }
 .text-color{
-	margin-top:auto;
-	margin-bottom: auto;
-	border:2px solid black;
-	height:100%;
-	width:90%;
+	margin:2px 4px;
+	border:2px solid white;
+	height:46%;
+	width:10%;
 	border-radius:50%;
 
 }
+.text-container .active, .text-color:hover{
+	border:2px solid white;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+.saveBtn{
+	background-color:#9e0ce9;
+	width:40%;
+	padding:10px 0px;
+	margin-top: 20px;
+	border-radius:5px;
+	opacity:1;
+}
+.saveBtn:hover{
+	opacity: 1;
+	background-color: #9e0ce9;
+	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+.saveBtn h3{
+	margin:0px;
+	color:#fff;
+	font-family:'Kalam', cursive;
+}
+/*font-family: 'Alex Brush', cursive;
+font-family: 'Allura', cursive; ,chance
+font-family: 'Cabin Sketch', cursive;
+font-family: 'Caveat', cursive; %%
+font-family: 'Dancing Script', cursive; %%
+font-family: 'Fredericka the Great', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Homemade Apple', cursive;
+font-family: 'Kalam', cursive; %%%
+font-family: 'Mr De Haviland', cursive; Date
+font-family: 'Nothing You Could Do', cursive; ,chance
+font-family: 'Pinyon Script', cursive;
+font-family: 'Rock Salt', cursive;
+font-family: 'Tangerine', cursive;
+font-family: 'Yellowtail', cursive;*/

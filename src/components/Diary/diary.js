@@ -17,7 +17,9 @@ class Diary extends React.Component {
 			newRoute:"profile",		
 			Month:new Date().getMonth()+1,
 			Year:new Date().getFullYear(),
-			Avatar:Men
+			Avatar:Men,
+			DiaryName:'',
+			textColor:"#000"
 			}
 	}
 	monthInText = (value) => {
@@ -137,7 +139,33 @@ class Diary extends React.Component {
   		
   	
   	}
-
+  	textColorSelection = (e) => {
+  		var current = document.getElementsByClassName("text-color active")
+  		current[0].className = current[0].className.replace("active","");
+  		e.target.classList.add("active")
+  		console.log(e.target.style.backgroundColor)
+  		this.setState({textColor:e.target.style.backgroundColor})
+  	}
+  	saveChanges = (e) => {
+  		var avatar= document.getElementsByClassName("Avatar active")[0].lastElementChild.textContent;
+  		if (avatar === "Men"){
+  			this.setState({Avatar:Men})
+  		}else if (avatar === "Women"){
+  			this.setState({Avatar:Women})
+  		}else if (avatar === "Women"){
+  			this.setState({Avatar:Women})
+  		}else if (avatar === "Women"){
+  			this.setState({Avatar:Women})
+  		}else if (avatar === "Women"){
+  			this.setState({Avatar:Women})
+  		}
+  		var newDiaryName = document.getElementsByClassName("diaryName")[0].firstElementChild.value;
+  		if (newDiaryName !== ""){
+  			this.setState({DiaryName:newDiaryName})
+  		}
+  		var newTextColor = document.getElementsByClassName("text-color active")[0].style.backgroundColor
+  		this.setState({textColor:newTextColor})
+  	}
 	 
 	changeTheme = () => {
 	 	
@@ -164,15 +192,20 @@ class Diary extends React.Component {
 
 
 	 }
+	 componentDidMount(){
+	 	document.getElementById("qual").style.color=this.state.textColor;
+	 	console.log(document.getElementById("qual").style.color)
+	 }
+
 
 	render(){
-
+		console.log(this.state.textColor,this.state.Avatar,this.state.DiaryName)
 		return (
 			<div className ="bg-black br3 pv4 pl4 pr0" id="text">
 				<div className="dib  h-100 mh1 w-60 textarea">
 
 				  
-					<textarea id="qual"className="br3" maxLength="1100" >Add Title</textarea>
+					<textarea id="qual"className="br3" maxLength="1100" defaultValue="Add Title"></textarea>
 
 					<h2 className="H1">{`${this.monthInText(this.state.Month)}`} 01, {`${this.state.Year}`} -<div className="dib stylechar"> &#128448;</div><div className="dib styleletter"> No Food</div><Emoji className="dib stylechar" symbol="💭" label="Comment" /> <div className="dib styleletter"> No Comment</div></h2>
 					<div className="H4"><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
@@ -198,7 +231,7 @@ class Diary extends React.Component {
 						{ this.state.newRoute === "profile"
 							?<Profile Avatar={this.state.Avatar} Month={this.state.Month} Year={this.state.Year} rightClmChange={this.animate} mouseOverImage={this.mouseOverImage} mouseOutImage={this.mouseOutImage} aboutChange={this.about}/>	
 							: (this.state.newRoute === "setting" )
-							?<Setting onBack={this.onBack} avatarSelection={this.avatarSelection}/>
+							?<Setting onBack={this.onBack} avatarSelection={this.avatarSelection} textColorSelection={this.textColorSelection} saveChanges={this.saveChanges}/>
 							: <About onBack={this.onBack} />
 						
 

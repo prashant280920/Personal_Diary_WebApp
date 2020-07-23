@@ -20,7 +20,7 @@ const Profile = ({ Month, Year, Avatar, rightClmChange , aboutChange, mouseOverI
 			 <Emoji onMouseOver={mouseOverImage} onMouseOut={mouseOutImage} onClick={aboutChange} className="imgChange grow pointer dib aboutIcon" symbol="📘" label="about" title="About Developers" />
 			<h1 className="p-feel"><u>Avatar</u></h1>
 			<div className="center">
-				<img useRef="image" src={Avatar} id="myAvatar" />
+				<img useRef="image" src={Avatar} alt="Avatar" id="myAvatar" />
 			</div>
 			<h1 className="p-cal"><u>Calender</u></h1>
 			<Calender Month={Month} Year={Year}/>
