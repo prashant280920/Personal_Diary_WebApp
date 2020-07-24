@@ -1,21 +1,25 @@
 {
   "files": {
-    "main.css": "/Personal_Diary_WebApp/static/css/main.05a2c6cb.chunk.css",
-    "main.js": "/Personal_Diary_WebApp/static/js/main.a0429f1e.chunk.js",
-    "main.js.map": "/Personal_Diary_WebApp/static/js/main.a0429f1e.chunk.js.map",
+    "main.css": "/Personal_Diary_WebApp/static/css/main.ea4f4023.chunk.css",
+    "main.js": "/Personal_Diary_WebApp/static/js/main.70a7f5e3.chunk.js",
+    "main.js.map": "/Personal_Diary_WebApp/static/js/main.70a7f5e3.chunk.js.map",
     "runtime-main.js": "/Personal_Diary_WebApp/static/js/runtime-main.b1f0adbc.js",
     "runtime-main.js.map": "/Personal_Diary_WebApp/static/js/runtime-main.b1f0adbc.js.map",
     "static/css/2.3c03f26f.chunk.css": "/Personal_Diary_WebApp/static/css/2.3c03f26f.chunk.css",
-    "static/js/2.494bfd87.chunk.js": "/Personal_Diary_WebApp/static/js/2.494bfd87.chunk.js",
-    "static/js/2.494bfd87.chunk.js.map": "/Personal_Diary_WebApp/static/js/2.494bfd87.chunk.js.map",
+    "static/js/2.58b86178.chunk.js": "/Personal_Diary_WebApp/static/js/2.58b86178.chunk.js",
+    "static/js/2.58b86178.chunk.js.map": "/Personal_Diary_WebApp/static/js/2.58b86178.chunk.js.map",
     "index.html": "/Personal_Diary_WebApp/index.html",
-    "precache-manifest.add239412778c8191c46fffd2d5fa9d8.js": "/Personal_Diary_WebApp/precache-manifest.add239412778c8191c46fffd2d5fa9d8.js",
+    "precache-manifest.8cb73fe64c6781dbfe133d7486b4fa6f.js": "/Personal_Diary_WebApp/precache-manifest.8cb73fe64c6781dbfe133d7486b4fa6f.js",
     "service-worker.js": "/Personal_Diary_WebApp/service-worker.js",
     "static/css/2.3c03f26f.chunk.css.map": "/Personal_Diary_WebApp/static/css/2.3c03f26f.chunk.css.map",
-    "static/css/main.05a2c6cb.chunk.css.map": "/Personal_Diary_WebApp/static/css/main.05a2c6cb.chunk.css.map",
-    "static/js/2.494bfd87.chunk.js.LICENSE.txt": "/Personal_Diary_WebApp/static/js/2.494bfd87.chunk.js.LICENSE.txt",
+    "static/css/main.ea4f4023.chunk.css.map": "/Personal_Diary_WebApp/static/css/main.ea4f4023.chunk.css.map",
+    "static/js/2.58b86178.chunk.js.LICENSE.txt": "/Personal_Diary_WebApp/static/js/2.58b86178.chunk.js.LICENSE.txt",
+    "static/media/Boy.png": "/Personal_Diary_WebApp/static/media/Boy.546c9fac.png",
     "static/media/Login.css": "/Personal_Diary_WebApp/static/media/Diarywallper.c2c0420a.png",
-    "static/media/Men.png": "/Personal_Diary_WebApp/static/media/Men.46ac9734.png",
+    "static/media/Girl.png": "/Personal_Diary_WebApp/static/media/Girl.a993b27a.png",
+    "static/media/Man.png": "/Personal_Diary_WebApp/static/media/Man.0d3dc844.png",
+    "static/media/Old_Man.png": "/Personal_Diary_WebApp/static/media/Old_Man.383821ec.png",
+    "static/media/Old_Women.png": "/Personal_Diary_WebApp/static/media/Old_Women.595911a9.png",
     "static/media/Prashant.JPG": "/Personal_Diary_WebApp/static/media/Prashant.b76107a9.JPG",
     "static/media/Ravi.png": "/Personal_Diary_WebApp/static/media/Ravi.c7ad4ed0.png",
     "static/media/Women.png": "/Personal_Diary_WebApp/static/media/Women.46ac9734.png"
@@ -23,8 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.b1f0adbc.js",
     "static/css/2.3c03f26f.chunk.css",
-    "static/js/2.494bfd87.chunk.js",
-    "static/css/main.05a2c6cb.chunk.css",
-    "static/js/main.a0429f1e.chunk.js"
+    "static/js/2.58b86178.chunk.js",
+    "static/css/main.ea4f4023.chunk.css",
+    "static/js/main.70a7f5e3.chunk.js"
   ]
 }
