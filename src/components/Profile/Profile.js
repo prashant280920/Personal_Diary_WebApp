@@ -2,8 +2,7 @@ import React from 'react';
 import Calender from "./.././Calender/Calender.js";
 import Mood from "./Mood.js";
 import Emoji from ".././Emoji/Emoji.js";
-import Women from "../Setting/Avatar_images/Women.png";
-import Men from "../Setting/Avatar_images/Men.png";
+
 
 const Profile = ({ Month, Year, Avatar, rightClmChange , aboutChange, mouseOverImage, mouseOutImage}) => {
 	console.log("Pro",Month,Year)

@@ -8,7 +8,12 @@ import About from ".././About/About.js";
 import $ from 'jquery';
 import 'tachyons';
 import Women from "../Setting/Avatar_images/Women.png";
-import Men from "../Setting/Avatar_images/Men.png";
+import Man from "../Setting/Avatar_images/Man.png";
+import Old_Man from "../Setting/Avatar_images/Old_Man.png";
+import Old_Women from "../Setting/Avatar_images/Old_Women.png";
+import Boy from "../Setting/Avatar_images/Boy.png";
+import Girl from "../Setting/Avatar_images/Girl.png";
+// import Diarywallper from "./Diarywallper.png"
 
 class Diary extends React.Component {
 	constructor(props){
@@ -17,7 +22,7 @@ class Diary extends React.Component {
 			newRoute:"profile",		
 			Month:new Date().getMonth()+1,
 			Year:new Date().getFullYear(),
-			Avatar:Men,
+			Avatar:Women,
 			DiaryName:'',
 			textColor:"#000"
 			}
@@ -116,10 +121,10 @@ class Diary extends React.Component {
   			if(current[0]){
   					current[0].className = current[0].className.replace(" active", "");
   			e.target.classList.add("active")
-  			this.setState({Avatar:Women})	
+  				
   			}else{
   				e.target.parentNode.classList.add("active")	
-  					this.setState({Avatar:Women})
+  					
   			}
     		
   		}else{
@@ -128,10 +133,10 @@ class Diary extends React.Component {
   			if(current[0]){
   				current[0].className = current[0].className.replace(" active", "");
   				e.target.parentNode.classList.add("active")	
-  				this.setState({Avatar:Women})	
+  			
   			}else{
   					e.target.parentNode.classList.add("active")	
-  					this.setState({Avatar:Women})
+  				
   			}
 
     		
@@ -147,24 +152,27 @@ class Diary extends React.Component {
   		this.setState({textColor:e.target.style.backgroundColor})
   	}
   	saveChanges = (e) => {
-  		var avatar= document.getElementsByClassName("Avatar active")[0].lastElementChild.textContent;
-  		if (avatar === "Men"){
-  			this.setState({Avatar:Men})
-  		}else if (avatar === "Women"){
+  		var avatar= document.getElementsByClassName("Avatar active")[0].firstElementChild.alt;
+  		if (avatar === "Man Avatar"){
+  			this.setState({Avatar:Man})
+  		}else if (avatar === "Women Avatar"){
   			this.setState({Avatar:Women})
-  		}else if (avatar === "Women"){
-  			this.setState({Avatar:Women})
-  		}else if (avatar === "Women"){
-  			this.setState({Avatar:Women})
-  		}else if (avatar === "Women"){
-  			this.setState({Avatar:Women})
+  		}else if (avatar === "Old_Women Avatar"){
+  			this.setState({Avatar:Old_Women})
+  		}else if (avatar === "Boy Avatar"){
+  			this.setState({Avatar:Boy})
+  		}else if (avatar === "Girl Avatar"){
+  			this.setState({Avatar:Girl})
+  		}else if (avatar === "Old_Man Avatar"){
+  			this.setState({Avatar:Old_Man})
   		}
   		var newDiaryName = document.getElementsByClassName("diaryName")[0].firstElementChild.value;
   		if (newDiaryName !== ""){
-  			this.setState({DiaryName:newDiaryName})
+  			this.props.changeDiaryName(newDiaryName)
   		}
   		var newTextColor = document.getElementsByClassName("text-color active")[0].style.backgroundColor
   		this.setState({textColor:newTextColor})
+  		this.setState({newRoute:"profile"})
   	}
 	 
 	changeTheme = () => {
@@ -195,11 +203,15 @@ class Diary extends React.Component {
 	 componentDidMount(){
 	 	document.getElementById("qual").style.color=this.state.textColor;
 	 	console.log(document.getElementById("qual").style.color)
+	 	// document.getElementByTagName("body").style.backgr
+	 	// document.body.style.backgroundColor="red";
+	 	 // document.body.style.background="linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("+Diarywallper+") no-repeat center center fixed";
+    //   document.body.style.backgroundSize="cover";
 	 }
 
 
 	render(){
-		console.log(this.state.textColor,this.state.Avatar,this.state.DiaryName)
+		
 		return (
 			<div className ="bg-black br3 pv4 pl4 pr0" id="text">
 				<div className="dib  h-100 mh1 w-60 textarea">
@@ -213,8 +225,8 @@ class Diary extends React.Component {
 						<EmojiList/>
 					</div></div></div>
 					{/*<button id="btt" onClick={this.animate}>Light Mode</button>*/}
-					<h6 className="H2">---------------------------------------------------<div className="dib star">{/*&#8902;&#128448;*/}	&#9734;</div>-------------------------------------------------------</h6> 	
-					<h6 className="H3">---------------------------------------------------<div className="dib star">&#8902;</div>-------------------------------------------------------</h6> 
+					<h6 className="H2">---------------------------------------------------------------<div className="dib star">{/*&#8902;&#128448;*/}	&#9734;</div>----------------------------------------------------------------</h6> 	
+					<h6 className="H3">-----------------------------------------------------------------<div className="dib star">&#8902;</div>----------------------------------------------------------------</h6> 
 					<div className="H5">
 							<Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
 					<span id='favorite' title="Add Favorite" className="pointer" onClick={this.changeFavSymbol}  role="img" aria-label="">☆</span>

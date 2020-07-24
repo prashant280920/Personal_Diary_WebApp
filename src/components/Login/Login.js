@@ -22,9 +22,12 @@ class Login extends React.Component {
 		signInButton.addEventListener('click', () => {
 			container.classList.remove("right-panel-active");
 		});
+
+		// document.body.style.background="linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(./Diarywallper.png) no-repeat center center fixed";
 	}
 
 render(){
+
 	return (
 		<div>
 			<div className="container" id="container">
