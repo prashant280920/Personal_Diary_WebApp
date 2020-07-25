@@ -100,7 +100,7 @@ svg{
 }
 .set-text{
 	margin-left:10px;
-	font-family:"Arial";
+	
 	font-weight: 500;
 	font-family: 'Rock Salt', cursive;
 }
@@ -201,7 +201,7 @@ textarea:focus{
  .H2 {
  	font-family: 'Cabin Sketch', cursive;
 	position:absolute;
-	top:17.5%;
+	top:18.2%;
 	left:5%;
 	color:black;
 
@@ -227,7 +227,7 @@ textarea:focus{
  .H3 {
  	font-family: 'Cabin Sketch', cursive;
 	position:absolute;
-	bottom:3%;
+	bottom:3.5%;
 	left:5%;
 	color:black;
 }
@@ -527,7 +527,7 @@ label{
  
 }
 .Avatar-container .active, .Avatar:hover{
-	border:2px solid #e10f2c;
+	border:2px solid #a230d3;
 	 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
 }

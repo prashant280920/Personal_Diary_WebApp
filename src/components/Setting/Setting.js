@@ -23,10 +23,10 @@ const Setting = (props) => {
 			<h1 className="set-head center"><Emoji className="set-ico" symbol="🛠️🔧" label="setting" /><u>Setting</u><Emoji className="set-ico" symbol="🛠️🔧" label="setting" /></h1>
 			<h3 className="set-text">Change Avatar</h3>
 			<div className="center Avatar-container">
-				<div className="Avatar active br2 dib grow pointer" onClick={props.avatarSelection}>
+				<div className="Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Man} className="" alt="Man Avatar"/>
 									</div>
-				<div className="Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
+				<div className="Avatar active br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Women} className="br2" alt="Women Avatar"/>
 					
 				</div>

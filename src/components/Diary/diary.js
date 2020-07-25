@@ -172,6 +172,7 @@ class Diary extends React.Component {
   		}
   		var newTextColor = document.getElementsByClassName("text-color active")[0].style.backgroundColor
   		this.setState({textColor:newTextColor})
+  		document.getElementById("qual").style.color = newTextColor;
   		this.setState({newRoute:"profile"})
   	}
 	 
@@ -224,7 +225,7 @@ class Diary extends React.Component {
 					<div id="emoji-dropdown" className="pointer"><div  className="dropdown"> <Emoji className="dropbtn" title="Add Emoji" symbol="😀" label="smiley" /><div className="dropdown-content">
 						<EmojiList/>
 					</div></div></div>
-					{/*<button id="btt" onClick={this.animate}>Light Mode</button>*/}
+					{/*<button id="btt" onClick={this.changeTheme}>Light Mode</button>*/}
 					<h6 className="H2">---------------------------------------------------------------<div className="dib star">{/*&#8902;&#128448;*/}	&#9734;</div>----------------------------------------------------------------</h6> 	
 					<h6 className="H3">-----------------------------------------------------------------<div className="dib star">&#8902;</div>----------------------------------------------------------------</h6> 
 					<div className="H5">

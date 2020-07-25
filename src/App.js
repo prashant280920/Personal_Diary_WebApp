@@ -24,14 +24,14 @@ class App extends React.Component{
 
       
       }
- document.getElementById("root").style="width:100%;height:100%;";
+
       // document.body.style.background="linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("+Diarywallper+") no-repeat center center fixed";
       // document.body.style.backgroundSize="cover";
      }
      
 	 // 
    render(){
-    
+     document.getElementById("root").style="width:100%;height:100%;";
       return (
 
      // <Login />
