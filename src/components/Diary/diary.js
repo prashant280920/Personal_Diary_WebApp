@@ -13,6 +13,8 @@ import Old_Man from "../Setting/Avatar_images/Old_Man.png";
 import Old_Women from "../Setting/Avatar_images/Old_Women.png";
 import Boy from "../Setting/Avatar_images/Boy.png";
 import Girl from "../Setting/Avatar_images/Girl.png";
+import { IconContext } from "react-icons";
+import { GiSave } from "react-icons/gi";
 // import Diarywallper from "./Diarywallper.png"
 
 class Diary extends React.Component {
@@ -227,9 +229,15 @@ class Diary extends React.Component {
 
 					<h2 className="H1">{`${this.monthInText(this.state.Month)}`} 01, {`${this.state.Year}`} -<div className="dib stylechar"> &#128448;</div><div className="dib styleletter"> No Food</div><Emoji className="dib stylechar" symbol="💭" label="Comment" /> <div className="dib styleletter"> No Comment</div></h2>
 					<div className="H4"><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
-					<div id="emoji-dropdown" className="pointer"><div  className="dropdown"> <Emoji className="dropbtn" title="Add Emoji" symbol="😀" label="smiley" /><div className="dropdown-content">
+					<div id="emoji-dropdown" className="pointer "><div  className="dropdown grow"> <Emoji className="dropbtn" title="Add Emoji" symbol="😀" label="smiley" /><div className="dropdown-content">
 						<EmojiList/>
 					</div></div></div>
+					<IconContext.Provider value={{  className: " pointer save-icon" }}>
+			            <div className="save-icon-container" >
+			              <GiSave />
+			              <p className="pointer">Save</p>
+			            </div>
+			        </IconContext.Provider>
 					{/*<button id="btt" onClick={this.changeTheme}>Light Mode</button>*/}
 					<h6 className="H2">---------------------------------------------------------------<div className="dib star">{/*&#8902;&#128448;*/}	&#9734;</div>----------------------------------------------------------------</h6> 	
 					<h6 className="H3">-----------------------------------------------------------------<div className="dib star">&#8902;</div>----------------------------------------------------------------</h6> 
