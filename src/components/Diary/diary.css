@@ -20,7 +20,31 @@ font-family: 'Yellowtail', cursive;*/
 	width: 100px;
 	background-color: red;
 }*/
+.sign-out-icon-container{
+	position:absolute;
+	top:5%;
+	right:2%;
+	color:white;
+	transition: transform .25s ease-in-out;
+}
 
+.sign-out-icon{
+	color:white;	
+	font-size:30px;
+	
+}
+.sign-out-icon-container p{
+	margin:0px;
+	font-family: 'Rock Salt', cursive;
+	font-size: 10px;
+	margin-top:2px;
+	font-weight: 900;
+}
+.sign-out-icon-container:hover{
+	/*color:#d80d32;*/	
+	
+	transform:scale(1.2);
+}
 .back-container{
 	position:absolute;
 	top:2%;

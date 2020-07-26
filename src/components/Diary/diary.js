@@ -56,13 +56,18 @@ class Diary extends React.Component {
 	}
 	 onYearChange = (e) => {
 	 	console.log("year")
-
-		this.setState({Year:parseInt(e.target.value)})
+	 	var a = e.target.value
+	 	if(a <= new Date().getFullYear() && a>=2000 ){
+	 		this.setState({Year:parseInt(e.target.value)})
 
 		var year = document.getElementsByClassName("H1")[0].innerHTML
 			 var c = year.replace(year.slice(8,12),(e.target.value));
-			 document.getElementsByClassName("H1")[0].innerHTML = c;
+			 document.getElementsByClassName("H1")[0].innerHTML = c;	
+	 	}
+
+		
 	}
+	
 	changeFavSymbol = (e) => {
 		console.log("yes",this.state.Month,new Date().getMonth()+1,this.state.Month <= (new Date().getMonth()),this.state.Year,new Date().getFullYear(),this.state.Year <=new Date().getYear())
 	if (this.state.Month <= (new Date().getMonth()+1) && this.state.Year <=new Date().getFullYear() ){
@@ -237,7 +242,7 @@ class Diary extends React.Component {
 						<label style={{color:"white"}}>Enter Month</label>
 						<label style={{color:"white"}}>Enter Year</label>
 						<input className="date-search" type="number" max="12" min="1" defaultValue={this.state.Month} onChange={this.onMonthChange} />
-						<input className="date-search" type="number"  max="2020" min="2000" defaultValue={this.state.Year} onChange={this.onYearChange}/>
+						<input className="date-search" type="number"  max={new Date().getFullYear()} min="2000" defaultValue={this.state.Year} onChange={this.onYearChange}/>
 
 					</div>	
 					<div className="bg-white br3 w-100" id="profile">

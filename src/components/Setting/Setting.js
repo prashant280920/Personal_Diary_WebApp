@@ -25,7 +25,7 @@ const Setting = (props) => {
 			<div className="center Avatar-container">
 				<div className="Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Man} className="" alt="Man Avatar"/>
-									</div>
+				</div>
 				<div className="Avatar active br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Women} className="br2" alt="Women Avatar"/>
 					
