@@ -24,7 +24,7 @@ class Diary extends React.Component {
 			newRoute:"profile",		
 			Month:new Date().getMonth()+1,
 			Year:new Date().getFullYear(),
-			Avatar:Women,
+			Avatar:"Women",
 			DiaryName:'',
 			textColor:"#000"
 			}
@@ -161,17 +161,17 @@ class Diary extends React.Component {
   	saveChanges = (e) => {
   		var avatar= document.getElementsByClassName("Avatar active")[0].firstElementChild.alt;
   		if (avatar === "Man Avatar"){
-  			this.setState({Avatar:Man})
+  			this.setState({Avatar:"Man"})
   		}else if (avatar === "Women Avatar"){
-  			this.setState({Avatar:Women})
+  			this.setState({Avatar:"Women"})
   		}else if (avatar === "Old_Women Avatar"){
-  			this.setState({Avatar:Old_Women})
+  			this.setState({Avatar:"Old_Women"})
   		}else if (avatar === "Boy Avatar"){
-  			this.setState({Avatar:Boy})
+  			this.setState({Avatar:"Boy"})
   		}else if (avatar === "Girl Avatar"){
-  			this.setState({Avatar:Girl})
+  			this.setState({Avatar:"Girl"})
   		}else if (avatar === "Old_Man Avatar"){
-  			this.setState({Avatar:Old_Man})
+  			this.setState({Avatar:"Old_Man"})
   		}
   		var newDiaryName = document.getElementsByClassName("diaryName")[0].firstElementChild.value;
   		if (newDiaryName !== ""){

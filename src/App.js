@@ -10,21 +10,40 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      route:"signn",
+      route:"signIn",
       isSignedIn:false,
-      DiaryName:'Diary Name'
+      user:{
+        id : "",
+        name:"",
+        email:"",
+        diaryName:"",
+        joined:'',
+        Avatar:"",
+        textColor:""
+      }
       
       }
   }
+  loadUser = (data) => {
+    this.setState({user:{
+      id:data.id,
+      name:data.name,
+      email:data.email,
+      diaryName:data.diaryName,
+      joined:data.joined,
+      Avatar:data.Avatar,
+      textColor:data.textColor
+    }})
+  }
  
    changeDiaryName = (newName) => {
-    this.setState({DiaryName:newName})
+    this.setState(Object.assign(this.state.user,{diaryName : newName}))
    }
    onRouteChange = (route) => {
     this.setState({route:route})
     }
     loadDiaryName = (name) => {
-      this.setState({DiaryName:name})
+      this.setState(Object.assign(this.state.user,{diaryName : name}))
     }
 
     componentDidMount(){
@@ -41,17 +60,17 @@ class App extends React.Component{
      
 	  
    render(){
-    console.log(this.state.DiaryName)
+    console.log(this.state.user)
     this.state.route !== "signIn"
     ? document.getElementById("root").style="width:100%;height:100%;"
     : document.getElementById("root").style="";
       return (
         <div className="full">
          { this.state.route === "signIn"
-         ? <Login onRouteChange={this.onRouteChange} diaryName={this.loadDiaryName}/>
+         ? <Login onRouteChange={this.onRouteChange} loadUser={this.loadUser}/>
          :<div className="full ">
           <div className="center Diaryname">
-            <h1 id="name">{this.state.DiaryName}</h1>
+            <h1 id="name">{this.state.user.diaryName}</h1>
             <IconContext.Provider value={{  className: " pointer sign-out-icon" }}>
             <div className="sign-out-icon-container" onClick={() => this.onRouteChange("signIn")}>
               <GoSignOut />
@@ -60,7 +79,7 @@ class App extends React.Component{
           </IconContext.Provider>
           </div>
           <div className="App  w-100 "> 
-            <Diary changeTheme={this.changeTheme} changeDiaryName={this.changeDiaryName}/>
+            <Diary Avatar={this.state.user.Avatar} textColor={this.state.user.textColor} diaryName={this.state.user.diaryName} changeTheme={this.changeTheme} changeDiaryName={this.changeDiaryName}/>
            </div>
       </div>
         }
