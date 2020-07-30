@@ -21,12 +21,14 @@ class Diary extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
+			email:props.email,
 			newRoute:"profile",		
 			Month:new Date().getMonth()+1,
 			Year:new Date().getFullYear(),
-			Avatar:"Women",
-			DiaryName:'',
-			textColor:"#000"
+			Avatar:props.Avatar,
+			DiaryName:props.diaryName,
+			textColor:props.textColor,
+			fav:false
 			}
 	}
 	monthInText = (value) => {
@@ -84,7 +86,7 @@ class Diary extends React.Component {
       e.target.textContent='⭐';
       e.target.style.left="92%";
       e.target.title="Remove Favorite";
-      
+      this.setState({fav:true})
       console.log(date)
       
        document.getElementById(date).classList.add("fav") 
@@ -93,6 +95,7 @@ class Diary extends React.Component {
       e.target.textContent='☆';
       e.target.style.left="93%";
       e.target.title="Add Favorite";
+      this.setState({fav:false})
        document.getElementById(date).classList.remove("fav")
     }
 		
@@ -160,27 +163,41 @@ class Diary extends React.Component {
   	}
   	saveChanges = (e) => {
   		var avatar= document.getElementsByClassName("Avatar active")[0].firstElementChild.alt;
-  		if (avatar === "Man Avatar"){
+  		if (avatar === "Man"){
   			this.setState({Avatar:"Man"})
-  		}else if (avatar === "Women Avatar"){
+  		}else if (avatar === "Women"){
   			this.setState({Avatar:"Women"})
-  		}else if (avatar === "Old_Women Avatar"){
+  		}else if (avatar === "Old_Women"){
   			this.setState({Avatar:"Old_Women"})
-  		}else if (avatar === "Boy Avatar"){
+  		}else if (avatar === "Boy"){
   			this.setState({Avatar:"Boy"})
-  		}else if (avatar === "Girl Avatar"){
+  		}else if (avatar === "Girl"){
   			this.setState({Avatar:"Girl"})
-  		}else if (avatar === "Old_Man Avatar"){
+  		}else if (avatar === "Old_Man"){
   			this.setState({Avatar:"Old_Man"})
   		}
   		var newDiaryName = document.getElementsByClassName("diaryName")[0].firstElementChild.value;
   		if (newDiaryName !== ""){
   			this.props.changeDiaryName(newDiaryName)
+  			this.setState({DiaryName:newDiaryName})
+  		}else{
+  			newDiaryName = this.state.DiaryName;
   		}
   		var newTextColor = document.getElementsByClassName("text-color active")[0].style.backgroundColor
   		this.setState({textColor:newTextColor})
   		document.getElementById("qual").style.color = newTextColor;
   		this.setState({newRoute:"profile"})
+  		console.log(avatar,newTextColor,newDiaryName)
+  		fetch("http://localhost:5000/profile",{
+					method: "put",
+					headers: {'Content-Type':'application/json'},
+					body: JSON.stringify({
+						Avatar:avatar,
+						diaryName:newDiaryName,
+						textColor:newTextColor
+					})
+				}).then(res => res.json())
+				.then(console.log)
   	}
 	 
 	changeTheme = () => {
@@ -205,9 +222,30 @@ class Diary extends React.Component {
 	    $( ".profiles" ).removeClass( "profiles-dark" );
 	    console.log("Na ho")
   }
-
-
+  
 	 }
+	 saveText = () => {
+  	const date = document.getElementsByClassName("H1")[0].textContent.slice(4,6)
+  	const dateInString = ["","01","02","03","04","05","06","07","08","09","10","11","12"] 
+  	const month = dateInString[this.state.Month]
+  	const fullDate = String(this.state.Year)+"-"+month+"-"+date;
+  	
+  	const newtextContent = document.getElementById("qual").value;
+  	console.log(fullDate,this.state.fav,newtextContent)
+  	fetch("http://localhost:5000/textContent",{
+					method: "post",
+					headers: {'Content-Type':'application/json'},
+					body: JSON.stringify({
+						email:this.state.email,
+						textContent:newtextContent,
+						date:fullDate,
+						fav:this.state.fav
+					})
+				}).then(res => res.json())
+				.then(console.log)
+
+  }
+
 	 componentDidMount(){
 	 	document.getElementById("qual").style.color=this.state.textColor;
 	 	console.log(document.getElementById("qual").style.color)
@@ -233,7 +271,7 @@ class Diary extends React.Component {
 						<EmojiList/>
 					</div></div></div>
 					<IconContext.Provider value={{  className: " pointer save-icon" }}>
-			            <div className="save-icon-container" >
+			            <div className="save-icon-container" onClick={this.saveText} >
 			              <GiSave />
 			              <p className="pointer">Save</p>
 			            </div>
@@ -249,8 +287,8 @@ class Diary extends React.Component {
 					<div className="w-100 " id="search-box">
 						<label style={{color:"white"}}>Enter Month</label>
 						<label style={{color:"white"}}>Enter Year</label>
-						<input className="date-search" type="number" max="12" min="1" defaultValue={this.state.Month} onChange={this.onMonthChange} />
-						<input className="date-search" type="number"  max={new Date().getFullYear()} min="2000" defaultValue={this.state.Year} onChange={this.onYearChange}/>
+						<input id="month-search" className="date-search" type="number" max="12" min="1" defaultValue={this.state.Month} onChange={this.onMonthChange} />
+						<input id="year-search" className="date-search" type="number"  max={new Date().getFullYear()} min="2000" defaultValue={this.state.Year} onChange={this.onYearChange}/>
 
 					</div>	
 					<div className="bg-white br3 w-100" id="profile">

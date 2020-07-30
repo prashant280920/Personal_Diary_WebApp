@@ -24,26 +24,26 @@ const Setting = (props) => {
 			<h3 className="set-text">Change Avatar</h3>
 			<div className="center Avatar-container">
 				<div className="Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
-					<img src={Man} className="" alt="Man Avatar"/>
+					<img src={Man} className="" alt="Man"/>
 				</div>
 				<div className="Avatar active br2 dib grow pointer" onClick={props.avatarSelection}>
-					<img src={Women} className="br2" alt="Women Avatar"/>
+					<img src={Women} className="br2" alt="Women"/>
 					
 				</div>
 				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
-					<img src={Boy} className="br2" alt="Boy Avatar"/>
+					<img src={Boy} className="br2" alt="Boy"/>
 					
 				</div>
 				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
-					<img src={Girl} className="br2" alt="Girl Avatar"/>
+					<img src={Girl} className="br2" alt="Girl"/>
 					
 				</div>
 				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
-					<img src={Old_Man} className="br2" alt="Old_Man Avatar"/>
+					<img src={Old_Man} className="br2" alt="Old_Man"/>
 					
 				</div>
 				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
-					<img src={Old_Women} className="br2" alt="Old_Women Avatar"/>
+					<img src={Old_Women} className="br2" alt="Old_Women"/>
 					
 				</div>
 				

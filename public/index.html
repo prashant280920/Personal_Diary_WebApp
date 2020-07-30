@@ -67,6 +67,21 @@
       star.textContent = "☆";
       star.style.left="93%";
      }
+     const monthInTwoDigit = ["","01","02","03","04","05","06","07","08","09","10","11","12"] 
+     var month = monthInTwoDigit[parseInt(document.getElementById("month-search").value)]
+     const year = document.getElementById("year-search").value;
+     var fullDate = year+"-"+month+"-"+date;
+     const email = document.getElementById("email").textContent;
+     fetch("http://localhost:5000/showText",{
+          method: "post",
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+            email:email,
+            date:fullDate
+           
+          })
+        }).then(res => res.json())
+        .then(console.log)
 
     }
 

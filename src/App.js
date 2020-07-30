@@ -71,6 +71,7 @@ class App extends React.Component{
          :<div className="full ">
           <div className="center Diaryname">
             <h1 id="name">{this.state.user.diaryName}</h1>
+            <h1 id="email" style={{display:"none"}}>{this.state.user.email}</h1>
             <IconContext.Provider value={{  className: " pointer sign-out-icon" }}>
             <div className="sign-out-icon-container" onClick={() => this.onRouteChange("signIn")}>
               <GoSignOut />
@@ -79,7 +80,7 @@ class App extends React.Component{
           </IconContext.Provider>
           </div>
           <div className="App  w-100 "> 
-            <Diary Avatar={this.state.user.Avatar} textColor={this.state.user.textColor} diaryName={this.state.user.diaryName} changeTheme={this.changeTheme} changeDiaryName={this.changeDiaryName}/>
+            <Diary email={this.state.user.email} Avatar={this.state.user.Avatar} textColor={this.state.user.textColor} diaryName={this.state.user.diaryName} changeTheme={this.changeTheme} changeDiaryName={this.changeDiaryName}/>
            </div>
       </div>
         }
