@@ -41,7 +41,7 @@ class Profile extends React.Component {
 		
 	render(){
 		
-		const { Month, Year, rightClmChange , aboutChange, mouseOverImage, mouseOutImage} = this.props
+		const { email, Month, Year, rightClmChange , aboutChange, mouseOverImage, mouseOutImage} = this.props
 		return (
 		<div className=" pa2 profiles" style={{height:"100%",width:"100%",margin:"0px"}}>
 			<Emoji onClick={rightClmChange} className="pointer settingIcon dib" symbol="⚙️" label="setting" title="Setting"/>
@@ -51,7 +51,7 @@ class Profile extends React.Component {
 				<img src={this.state.Avatar} alt="Avatar" id="myAvatar" />
 			</div>
 			<h1 className="p-cal"><u>Calender</u></h1>
-			<Calender Month={Month} Year={Year}/>
+			<Calender email={email} Month={Month} Year={Year}/>
 			<h1 className="p-feel">How You feel Today?</h1>
 			<Mood />
 		</div>

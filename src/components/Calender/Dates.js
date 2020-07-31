@@ -81,10 +81,37 @@ const Months = [
 
 	]
 	
-const Dates = ({ Month, Year }) => {
-	
+const Dates = ({ email, Month, Year }) => {
+	console.log(email,Month,Year)
+	const monthInTwoDigit = ["","01","02","03","04","05","06","07","08","09","10","11","12"] 
+	var month = monthInTwoDigit[Month]
 	var a = new Date();
 	var t='';
+	fetch("http://localhost:5000/fav",{
+          method: "post",
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+            email:email,
+            month:month,
+            year:String(Year)
+           
+          })
+        }).then(res => res.json())
+        .then(content => {
+          
+          console.log(content)
+          for(var i =0; i<content.length;i++){
+          	document.getElementById(String(parseInt(content[i].date.slice(8,10)))).classList.add("save")
+          	document.getElementById(String(parseInt(content[i].date.slice(8,10)))).style.borderBottom = "5px solid #0c11a0"	
+          	if(content[i].fav){
+          		console.log("enter")
+          		document.getElementById(String(parseInt(content[i].date.slice(8,10)))).classList.add("fav")	
+          	}
+          	 
+          }
+        })
+ 
+    
 
 		for (var i=Months[Month].start;i<=Months[Month].end;i++){
 			

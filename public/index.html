@@ -81,7 +81,14 @@
            
           })
         }).then(res => res.json())
-        .then(console.log)
+        .then(content => {
+          console.log(content)
+          if(content.id){
+            document.getElementById("qual").value = content.textContent
+          }else{
+            document.getElementById("qual").value = "Add Title \n"
+          }
+        })
 
     }
 

@@ -86,17 +86,17 @@ class Diary extends React.Component {
       e.target.textContent='⭐';
       e.target.style.left="92%";
       e.target.title="Remove Favorite";
-      this.setState({fav:true})
+    
       console.log(date)
       
-       document.getElementById(date).classList.add("fav") 
+       
     }
     else{
       e.target.textContent='☆';
       e.target.style.left="93%";
       e.target.title="Add Favorite";
-      this.setState({fav:false})
-       document.getElementById(date).classList.remove("fav")
+ 
+       
     }
 		
 	}
@@ -229,7 +229,38 @@ class Diary extends React.Component {
   	const dateInString = ["","01","02","03","04","05","06","07","08","09","10","11","12"] 
   	const month = dateInString[this.state.Month]
   	const fullDate = String(this.state.Year)+"-"+month+"-"+date;
-  	
+  	  var star = document.getElementById("favorite");
+var fav =false;
+  	  if(star.textContent === "⭐"){
+      fav = true;
+     }else{
+     	fav = false;
+     }
+     if (this.state.Month <= (new Date().getMonth()+1) && this.state.Year <=new Date().getFullYear() ){
+		console.log("yo")
+		var star = document.getElementById("favorite")
+		var content = star.textContent;
+		console.log(star,content)
+    var starDate = document.getElementsByClassName("H1")[0].innerHTML.slice(4,6);
+    if (starDate[0]==="0"){
+        starDate = starDate[1];
+       
+      }
+    if (content === "☆"){
+     
+    document.getElementById(starDate).classList.remove("fav")
+      console.log(starDate)
+      
+       
+    }
+    else{
+     document.getElementById(starDate).classList.add("fav") 
+ 
+       
+    }
+    document.getElementById(starDate).classList.add("save") 
+	document.getElementById(starDate).style.borderBottom = "5px solid #0c11a0"		
+	}
   	const newtextContent = document.getElementById("qual").value;
   	console.log(fullDate,this.state.fav,newtextContent)
   	fetch("http://localhost:5000/textContent",{
@@ -239,7 +270,7 @@ class Diary extends React.Component {
 						email:this.state.email,
 						textContent:newtextContent,
 						date:fullDate,
-						fav:this.state.fav
+						fav:fav
 					})
 				}).then(res => res.json())
 				.then(console.log)
@@ -293,7 +324,7 @@ class Diary extends React.Component {
 					</div>	
 					<div className="bg-white br3 w-100" id="profile">
 						{ this.state.newRoute === "profile"
-							?<Profile Avatar={this.state.Avatar} Month={this.state.Month} Year={this.state.Year} rightClmChange={this.animate} mouseOverImage={this.mouseOverImage} mouseOutImage={this.mouseOutImage} aboutChange={this.about}/>	
+							?<Profile email={this.state.email} Avatar={this.state.Avatar} Month={this.state.Month} Year={this.state.Year} rightClmChange={this.animate} mouseOverImage={this.mouseOverImage} mouseOutImage={this.mouseOutImage} aboutChange={this.about}/>	
 							: (this.state.newRoute === "setting" )
 							?<Setting onBack={this.onBack} avatarSelection={this.avatarSelection} textColorSelection={this.textColorSelection} saveChanges={this.saveChanges}/>
 							: <About onBack={this.onBack} />

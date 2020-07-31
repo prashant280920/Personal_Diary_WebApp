@@ -20,6 +20,9 @@ font-family: 'Yellowtail', cursive;*/
 	width: 100px;
 	background-color: red;
 }*/
+.save{
+	color:#0c11a0;
+}
 .save-icon-container{
 	position:absolute;
 	top:15%;
