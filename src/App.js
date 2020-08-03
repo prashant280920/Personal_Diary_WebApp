@@ -25,14 +25,15 @@ class App extends React.Component{
       }
   }
   loadUser = (data) => {
+
     this.setState({user:{
       id:data.id,
       name:data.name,
       email:data.email,
-      diaryName:data.diaryName,
+      diaryName:data.diaryname,
       joined:data.joined,
-      Avatar:data.Avatar,
-      textColor:data.textColor
+      Avatar:data.avatar,
+      textColor:data.textcolor
     }})
   }
  
@@ -80,7 +81,7 @@ class App extends React.Component{
           </IconContext.Provider>
           </div>
           <div className="App  w-100 "> 
-            <Diary email={this.state.user.email} Avatar={this.state.user.Avatar} textColor={this.state.user.textColor} diaryName={this.state.user.diaryName} changeTheme={this.changeTheme} changeDiaryName={this.changeDiaryName}/>
+            <Diary id={this.state.user.id} email={this.state.user.email} Avatar={this.state.user.Avatar} textColor={this.state.user.textColor} diaryName={this.state.user.diaryName} changeTheme={this.changeTheme} changeDiaryName={this.changeDiaryName}/>
            </div>
       </div>
         }

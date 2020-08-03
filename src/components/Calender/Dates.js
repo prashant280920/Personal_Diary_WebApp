@@ -101,11 +101,11 @@ const Dates = ({ email, Month, Year }) => {
           
           console.log(content)
           for(var i =0; i<content.length;i++){
-          	document.getElementById(String(parseInt(content[i].date.slice(8,10)))).classList.add("save")
-          	document.getElementById(String(parseInt(content[i].date.slice(8,10)))).style.borderBottom = "5px solid #0c11a0"	
+          	document.getElementById(String(parseInt(content[i].dates.slice(8,10)))).classList.add("save")
+          	document.getElementById(String(parseInt(content[i].dates.slice(8,10)))).style.borderBottom = "5px solid #0c11a0"	
           	if(content[i].fav){
           		console.log("enter")
-          		document.getElementById(String(parseInt(content[i].date.slice(8,10)))).classList.add("fav")	
+          		document.getElementById(String(parseInt(content[i].dates.slice(8,10)))).classList.add("fav")	
           	}
           	 
           }

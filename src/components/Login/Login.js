@@ -46,7 +46,9 @@ class Login extends React.Component {
 					})
 				}).then(res => res.json())
 				.then(user => {
+					console.log(user,"outside")
 					if (user.id){
+						console.log(user,"inside")
 						this.props.loadUser(user)
 						this.props.onRouteChange("home")
 							
@@ -77,6 +79,7 @@ class Login extends React.Component {
 					})
 				}).then(res => res.json())
 				.then(user => {
+					console.log(user.id)
 					if (user.id){
 						this.props.loadUser(user)
 						this.props.onRouteChange("home")

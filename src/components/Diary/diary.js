@@ -21,6 +21,7 @@ class Diary extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
+			id:props.id,
 			email:props.email,
 			newRoute:"profile",		
 			Month:new Date().getMonth()+1,
@@ -183,12 +184,15 @@ class Diary extends React.Component {
   		}else{
   			newDiaryName = this.state.DiaryName;
   		}
+  		console.log(this.state.id)
   		var newTextColor = document.getElementsByClassName("text-color active")[0].style.backgroundColor
   		this.setState({textColor:newTextColor})
   		document.getElementById("qual").style.color = newTextColor;
   		this.setState({newRoute:"profile"})
   		console.log(avatar,newTextColor,newDiaryName)
-  		fetch("http://localhost:5000/profile",{
+  		var link = "http://localhost:5000/profile/"+this.state.id
+  		console.log(link)
+  		fetch((link),{
 					method: "put",
 					headers: {'Content-Type':'application/json'},
 					body: JSON.stringify({
