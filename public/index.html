@@ -49,8 +49,6 @@
     //}
 
     function trying(){
-      
-      console.log(this.event.target.classList.value)
       var fav = this.event.target.classList.value
       var date = this.event.target.textContent
       if (date.length === 1){
@@ -82,9 +80,7 @@
           })
         }).then(res => res.json())
         .then(content => {
-          console.log(content)
           if(content.id){
-            console.log('')
             document.getElementById("qual").value = content.textcontent
           }else{
             document.getElementById("qual").value = "Add Title \n"

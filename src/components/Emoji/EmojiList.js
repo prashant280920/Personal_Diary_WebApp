@@ -1,11 +1,5 @@
 import React from 'react';
 import Emoji from './Emoji.js';
- 
-
-
-
-
-
 
 const EmojiList = () => {
 	 

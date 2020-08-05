@@ -5,7 +5,7 @@ import Diary from "./components/Diary/diary.js";
 import $ from "jquery";
 import { IconContext } from "react-icons";
 import { GoSignOut } from "react-icons/go";
-// import Diarywallper from "./Diarywallper.png"
+
 class App extends React.Component{
   constructor(props){
     super(props);
@@ -61,7 +61,6 @@ class App extends React.Component{
      
 	  
    render(){
-    console.log(this.state.user)
     this.state.route !== "signIn"
     ? document.getElementById("root").style="width:100%;height:100%;"
     : document.getElementById("root").style="";
@@ -83,8 +82,8 @@ class App extends React.Component{
           <div className="App  w-100 "> 
             <Diary id={this.state.user.id} email={this.state.user.email} Avatar={this.state.user.Avatar} textColor={this.state.user.textColor} diaryName={this.state.user.diaryName} changeTheme={this.changeTheme} changeDiaryName={this.changeDiaryName}/>
            </div>
-      </div>
-        }
+          </div>
+          }
         </div>
        
     

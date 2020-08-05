@@ -15,11 +15,11 @@ const Setting = (props) => {
 		return (
 		<div id="setting" className="  pa2  profiles" style={{height:"100%",width:"100%",margin:"0px"}}>
 			<IconContext.Provider value={{  className: " pointer back" }}>
-				  <div className="back-container" onClick={props.onBack}>
-				    <TiArrowBack />
-				    <p>Back</p>
-				  </div>
-				</IconContext.Provider>
+				<div className="back-container" onClick={props.onBack}>
+				   <TiArrowBack />
+				   <p>Back</p>
+				</div>
+			</IconContext.Provider>
 			<h1 className="set-head center"><Emoji className="set-ico" symbol="🛠️🔧" label="setting" /><u>Setting</u><Emoji className="set-ico" symbol="🛠️🔧" label="setting" /></h1>
 			<h3 className="set-text">Change Avatar</h3>
 			<div className="center Avatar-container">
@@ -28,25 +28,19 @@ const Setting = (props) => {
 				</div>
 				<div className="Avatar active br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Women} className="br2" alt="Women"/>
-					
 				</div>
 				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Boy} className="br2" alt="Boy"/>
-					
 				</div>
 				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Girl} className="br2" alt="Girl"/>
-					
 				</div>
 				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Old_Man} className="br2" alt="Old_Man"/>
-					
 				</div>
 				<div className=" Avatar br2 dib grow pointer" onClick={props.avatarSelection}>
 					<img src={Old_Women} className="br2" alt="Old_Women"/>
-					
 				</div>
-				
 			</div>
 			<h3 className="set-text">Change Diary Name</h3>
 			<div className="center diaryName">

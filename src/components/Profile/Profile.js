@@ -14,13 +14,12 @@ class Profile extends React.Component {
 		super(props);
 		this.state = {
 			Avatar:Women
-			}
+		}
 	}
 	
 	
 	NewAvatar = () => {
 		const avatar = this.props.Avatar
-		console.log("yes",avatar)
 		if (avatar === "Man"){
   			this.setState({Avatar:Man})
   		}else if (avatar === "Women"){
@@ -55,7 +54,7 @@ class Profile extends React.Component {
 			<h1 className="p-feel">How You feel Today?</h1>
 			<Mood />
 		</div>
-	);
+		);
 	}
 			
 	

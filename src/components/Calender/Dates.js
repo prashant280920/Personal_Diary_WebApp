@@ -1,4 +1,7 @@
 import React from 'react';
+// var moment = require('moment'); // require
+// moment().format(); 
+
 const Months = [
 		{
 			key:"0",
@@ -82,7 +85,6 @@ const Months = [
 	]
 	
 const Dates = ({ email, Month, Year }) => {
-	console.log(email,Month,Year)
 	const monthInTwoDigit = ["","01","02","03","04","05","06","07","08","09","10","11","12"] 
 	var month = monthInTwoDigit[Month]
 	var a = new Date();
@@ -93,43 +95,36 @@ const Dates = ({ email, Month, Year }) => {
           body: JSON.stringify({
             email:email,
             month:month,
-            year:String(Year)
-           
+            year:String(Year) 
           })
         }).then(res => res.json())
         .then(content => {
-          
-          console.log(content)
-          for(var i =0; i<content.length;i++){
+        	for(var i =0; i<content.length;i++){
+          	// 	 var milisec = Date.parse(content[0].dates);
+          	// 	 var m = moment.unix(milisec).tz('Asia/Kolkata').format('YYYY-MM-DD HH:mm:ss');
+          	// console.log(m)
           	document.getElementById(String(parseInt(content[i].dates.slice(8,10)))).classList.add("save")
           	document.getElementById(String(parseInt(content[i].dates.slice(8,10)))).style.borderBottom = "5px solid #0c11a0"	
           	if(content[i].fav){
-          		console.log("enter")
           		document.getElementById(String(parseInt(content[i].dates.slice(8,10)))).classList.add("fav")	
           	}
-          	 
           }
         })
- 
-    
+
 
 		for (var i=Months[Month].start;i<=Months[Month].end;i++){
 			
 			
 			if (Year<a.getFullYear() || Month<a.getMonth()+1){
 				t+=('<div id="'+String(i)+  '" class="Date dib  grow-large pointer br2 ma1 mb0 tc" onclick="trying()" style="height:30px;width:11%;">'+ i+'</div>')	
-				console.log("first")
 			}else if (Year === a.getFullYear() && Month === a.getMonth()+1){
 				if (i<=a.getDate()){
 					t+=('<div id="'+String(i)+  '" class="Date dib  grow-large br2 pointer ma1 mb0 tc" onclick="trying()" style="height:30px;width:11%;">'+ i+'</div>')
-					console.log(2,1)
 				}else{
 					t+=('<div id="'+String(i)+  '" class="Date_disabled dib br2 mb0 ma1 tc" style="height:30px;width:11%;">'+ i+'</div>')
-					console.log(2,2)
 				}
 			}else if (Year === a.getFullYear() && Month > a.getMonth()+1){
 				t+=('<div id="'+String(i)+  '" class="Date_disabled dib br2  ma1 mb0 tc" style="height:30px;width:11%;">'+ i+'</div>')
-				console.log(3)
 			}
 			
 		}

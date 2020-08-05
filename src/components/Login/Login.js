@@ -50,17 +50,13 @@ class Login extends React.Component {
 					if (user.id){
 						console.log(user,"inside")
 						this.props.loadUser(user)
-						this.props.onRouteChange("home")
-							
+						this.props.onRouteChange("home")		
 					}
 				})
-	
-			}
-				
+			}		
 		}
 	}
 	signInContent = (e) => {
-		console.log(e.target.value,e.target.placeholder)
 		if ( e.target.placeholder === "Email"){
 			this.setState(Object.assign(this.state.signIn,{email : e.target.value}))
 		}else if ( e.target.placeholder === "Password"){
@@ -79,18 +75,12 @@ class Login extends React.Component {
 					})
 				}).then(res => res.json())
 				.then(user => {
-					console.log(user.id)
 					if (user.id){
 						this.props.loadUser(user)
-						this.props.onRouteChange("home")
-							
+						this.props.onRouteChange("home")		
 					}
 				})
-				
-				
-				
 		}
-		
 	}
 	componentDidMount() {
 		const signUpButton = document.getElementById('signUp');
@@ -108,7 +98,6 @@ class Login extends React.Component {
 	}
 
 render(){
-	console.log(this.state.signUp.name,this.state.signUp.email,this.state.signUp.password,this.state.signIn.email,this.state.signIn.password)
 	return (
 		<div>
 			<div className="container" id="container">

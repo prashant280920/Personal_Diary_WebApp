@@ -5,13 +5,12 @@ class Mood extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			}
+		}
 	}
 		size = (e) => {
 			var targetValue = e.target.textContent;
 			var moodl=["forhappy","forsad","forangry","forlovely","forawful"]
 			var moodList = document.getElementsByClassName("moodBox");
-		
 			for(var i = 0; i < moodList.length; i++){
 				console.log(moodList[i].textContent.includes(targetValue))
 				  if (moodList[i].textContent.includes(targetValue) ){
@@ -19,7 +18,7 @@ class Mood extends React.Component {
 				  	
 				  }else{
 				  	moodList[i].lastElementChild.classList.remove(moodl[i]);
-				  }
+				}
 			}
 			
 		}
