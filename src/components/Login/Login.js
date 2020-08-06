@@ -20,7 +20,7 @@ class Login extends React.Component {
 		}
 	}
 	signUpContent = (e) => {
-		console.log(e.target.value,e.target.placeholder)
+		//console.log(e.target.value,e.target.placeholder)
 		if ( e.target.placeholder === "Your Name"){
 			this.setState(Object.assign(this.state.signUp,{name : e.target.value}))
 		}else if ( e.target.placeholder === "Email"){
