@@ -35,7 +35,7 @@ class Login extends React.Component {
 		const { name, email, password, diaryName } = this.state.signUp
 		if (email !== '' && password !== "" && name !== ''){
 			if (diaryName !== ""){
-				fetch("http://localhost:5000/signUp",{
+				fetch("https://still-atoll-20251.herokuapp.com/signUp",{
 					method: "post",
 					headers: {'Content-Type':'application/json'},
 					body: JSON.stringify({
@@ -66,7 +66,7 @@ class Login extends React.Component {
 	onSubmitSignIn = () => {
 		const { email, password} = this.state.signIn
 		if (email !== '' && password !== ""){
-			fetch("http://localhost:5000/signIn",{
+			fetch("https://still-atoll-20251.herokuapp.com/signIn",{
 					method: "post",
 					headers: {'Content-Type':'application/json'},
 					body: JSON.stringify({
@@ -98,6 +98,7 @@ class Login extends React.Component {
 	}
 
 render(){
+	console.log("second")
 	return (
 		<div>
 			<div className="container" id="container">

@@ -156,7 +156,7 @@ class Diary extends React.Component {
   		document.getElementById("qual").style.color = newTextColor;
   		this.setState({newRoute:"profile"})
   		//console.log(avatar,newTextColor,newDiaryName)
-  		var link = "http://localhost:5000/profile/"+this.state.id
+  		var link = "https://still-atoll-20251.herokuapp.com/profile/"+this.state.id
   		fetch((link),{
 					method: "put",
 					headers: {'Content-Type':'application/json'},
@@ -226,7 +226,7 @@ class Diary extends React.Component {
 		}
 	  	const newtextContent = document.getElementById("qual").value;
 	  	console.log(fullDate,this.state.fav,newtextContent)
-	  	fetch("http://localhost:5000/textContent",{
+	  	fetch("https://still-atoll-20251.herokuapp.com/textContent",{
 						method: "post",
 						headers: {'Content-Type':'application/json'},
 						body: JSON.stringify({

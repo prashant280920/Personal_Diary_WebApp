@@ -70,7 +70,7 @@
      const year = document.getElementById("year-search").value;
      var fullDate = year+"-"+month+"-"+date;
      const email = document.getElementById("email").textContent;
-     fetch("http://localhost:5000/showText",{
+     fetch("https://still-atoll-20251.herokuapp.com/showText",{
           method: "post",
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({

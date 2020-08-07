@@ -89,7 +89,8 @@ const Dates = ({ email, Month, Year }) => {
 	var month = monthInTwoDigit[Month]
 	var a = new Date();
 	var t='';
-	fetch("http://localhost:5000/fav",{
+	console.log(email)
+	fetch("https://still-atoll-20251.herokuapp.com/fav",{
           method: "post",
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({

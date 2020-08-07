@@ -11,7 +11,6 @@ class App extends React.Component{
     super(props);
     this.state = {
       route:"signIn",
-      isSignedIn:false,
       user:{
         id : "",
         name:"",
@@ -47,20 +46,21 @@ class App extends React.Component{
       this.setState(Object.assign(this.state.user,{diaryName : name}))
     }
 
-    componentDidMount(){
-      // if(this.state.route !== "signIn"){
+    // componentDidMount(){
+    //   // if(this.state.route !== "signIn"){
 
-      // document.getElementById("root").style="width:100%;height:100%;"
-      // }else{
-      //   document.getElementById("root").style="";
-      // }
+    //   // document.getElementById("root").style="width:100%;height:100%;"
+    //   // }else{
+    //   //   document.getElementById("root").style="";
+    //   // }
 
-      // document.body.style.background="linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("+Diarywallper+") no-repeat center center fixed";
-      // document.body.style.backgroundSize="cover";
-     }
+    //   // document.body.style.background="linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("+Diarywallper+") no-repeat center center fixed";
+    //   // document.body.style.backgroundSize="cover";
+    //  }
      
 	  
    render(){
+    console.log("first")
     this.state.route !== "signIn"
     ? document.getElementById("root").style="width:100%;height:100%;"
     : document.getElementById("root").style="";
