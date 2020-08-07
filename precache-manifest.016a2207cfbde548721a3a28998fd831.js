@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "88bd3c9dea03d42f2131b2a0d310d587",
+    "revision": "561f723b8397311f32651bd68781dba0",
     "url": "/Personal_Diary_WebApp/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Personal_Diary_WebApp/static/css/2.3c03f26f.chunk.css"
   },
   {
-    "revision": "dac932e1b171179dfc6e",
+    "revision": "58cbe11210e9fa71cb7b",
     "url": "/Personal_Diary_WebApp/static/css/main.dcbfacde.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Personal_Diary_WebApp/static/js/2.0fa4ff0d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dac932e1b171179dfc6e",
-    "url": "/Personal_Diary_WebApp/static/js/main.1a66373f.chunk.js"
+    "revision": "58cbe11210e9fa71cb7b",
+    "url": "/Personal_Diary_WebApp/static/js/main.a4fcafe8.chunk.js"
   },
   {
     "revision": "7a5b9e29565a206410ee",
