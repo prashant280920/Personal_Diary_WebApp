@@ -1,10 +1,10 @@
 # Personal_Diary_WebApp
 
-My Personal_Diary_WebApp is a thougth/idea keeping memories webapp which allows you to write, store and views your idea/thoughts and memories.
+My Personal_Diary_WebApp is a thought/idea of keeping memories on this webapp which allows you to write, store and view your ideas/thoughts and memories.
 
-A place to sore your content of diary live and safe.
+A place to store your content of diary live and safe.
 
-My attempt at making a decent intgerative diary.
+My attempt at making a decent interactive diary.
 
 ### App is live at
 1. Deploy on GitHub - https://prashant280920.github.io/Personal_Diary_WebApp/
@@ -23,13 +23,14 @@ Want to make project using
 1. Users can signUp and signIn
 2. Users can create diary entry
 3. Users can update diary entry
-4. Users can view all diary entry made by he/she
+4. Users can view all diary entry made by them.
 5. Users can change avatar, diary name and textcolor.
+6. Users can bookmark there favourite diary entry. 
 
 ### Upcoming Features
 1. Change Theme Option
 2. Animated opening of diary textarea
-These feature will coming soon.
+These feature will come soon.
 
 ### Technologies Used
 1. Frontend
