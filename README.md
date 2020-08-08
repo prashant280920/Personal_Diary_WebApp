@@ -1,68 +1,46 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Personal_Diary_WebApp
 
-## Available Scripts
+My Personal_Diary_WebApp is a thougth/idea keeping memories webapp which allows you to write, store and views your idea/thoughts and memories.
 
-In the project directory, you can run:
+A place to sore your content of diary live and safe.
 
-### `npm start`
+My attempt at making a decent intgerative diary.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### App is live at
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Deploy on GitHub - https://prashant280920.github.io/Personal_Diary_WebApp/
 
-### `npm test`
+### Hosted 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [Heroku](https://www.heroku.com/)
 
-### `npm run build`
+### Objective
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Want to make project using 
+* React.js
+* Node.js
+* Express.js framework
+* PostgreSQL
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Required Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Users can signUp and signIn
+2. Users can create diary entry
+3. Users can update diary entry
+4. Users can view all diary entry made by he/she
+5. Users can change avatar, diary name and textcolor.
 
-### `npm run eject`
+### Upcoming Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Change Theme Option
+2. Animated opening of diary textarea
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Technologies Used
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+1. Frontend
+  - [Reactjs](https://reactjs.org/) - A JavaScript library for building user interfaces.
+2. Backend
+  - [Node.js](https://nodejs.org/en/) - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+  - [Express.js framework](https://expressjs.com/) - Fast, unopinionated, minimalist web framework for Node.js.
+3. Database
+  - [PostgreSQL](https://www.postgresql.org/) - PostgreSQL is a powerful, open source object-relational database system.
