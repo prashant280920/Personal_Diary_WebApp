@@ -242,7 +242,6 @@ class Diary extends React.Component {
 
 	 componentDidMount(){
 	 	document.getElementById("qual").style.color=this.state.textColor;
-	 	
 	 	HTMLTextAreaElement.prototype.getCaretPosition = function () { //return the caret position of the textarea
        		 return this.selectionStart;
       	};
