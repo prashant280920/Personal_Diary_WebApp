@@ -70,7 +70,8 @@
      const year = document.getElementById("year-search").value;
      var fullDate = year+"-"+month+"-"+date;
      const email = document.getElementById("email").textContent;
-     fetch("https://still-atoll-20251.herokuapp.com/showText",{
+    //  fetch("https://still-atoll-20251.herokuapp.com/showText",{
+      fetch("http://localhost:3000/showText",{
           method: "post",
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({
@@ -81,7 +82,7 @@
         }).then(res => res.json())
         .then(content => {
           if(content.id){
-            document.getElementById("qual").value = content.textcontent
+            document.getElementById("qual").value = content.textContent
           }else{
             document.getElementById("qual").value = "Add Title \n"
           }

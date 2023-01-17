@@ -90,7 +90,8 @@ const Dates = ({ email, Month, Year }) => {
 	var a = new Date();
 	var t='';
 	console.log(email)
-	fetch("https://still-atoll-20251.herokuapp.com/fav",{
+	// fetch("https://still-atoll-20251.herokuapp.com/fav",{
+	fetch("http://localhost:3000/fav",{
           method: "post",
           headers: {'Content-Type':'application/json'},
           body: JSON.stringify({

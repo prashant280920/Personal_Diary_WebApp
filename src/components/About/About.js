@@ -24,7 +24,7 @@ const About = (props) => {
 						<h4>Prashant Kumar</h4>
 						<div className="social">
 							<ul>
-								<li className="dib  grow-large"><SocialIcon style={{height: 40, width: 40 }} target="_blank" url={`http://instagram.com/prashant282000/`} bgColor="black" fgColor="white" /></li>
+								<li className="dib  grow-large"><SocialIcon style={{height: 40, width: 40 }} target="_blank" url={`http://instagram.com/prashant_k280920/`} bgColor="black" fgColor="white" /></li>
 								<li className="dib mh3 grow-large"><SocialIcon style={{height: 40, width: 40 }} target="_blank" url={`http://facebook.com/profile.php?id=100011930971393`} bgColor="black" fgColor="white" /></li>
 								<li className="dib  grow-large"><SocialIcon style={{height: 40, width: 40 }} target="_blank" url={`http://github.com/prashant280920`} bgColor="black" fgColor="white" /></li>
 							</ul>
@@ -36,7 +36,7 @@ const About = (props) => {
 						<h4>Ravi Kumar</h4>
 						<div className="social">
 							<ul>
-								<li className="dib grow-large"><SocialIcon style={{height: 40, width: 40 }} target="_blank" url={`http://instagram.com/kumar._.ravi/`} bgColor="black" fgColor="white" /></li>
+								<li className="dib grow-large"><SocialIcon style={{height: 40, width: 40 }} target="_blank" url={`http://instagram.com/__.__ravi__.___/`} bgColor="black" fgColor="white" /></li>
 								<li className="dib mh3 grow-large"><SocialIcon style={{height: 40, width: 40 }} target="_blank" url={`http://facebook.com/profile.php?id=100030335002073`} bgColor="black" fgColor="white" /></li>
 								<li className="dib grow-large"><SocialIcon style={{height: 40, width: 40 }} target="_blank" url={`http://github.com/RaviKumar7870`} bgColor="black" fgColor="white" /></li>
 							</ul>

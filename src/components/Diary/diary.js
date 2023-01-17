@@ -156,7 +156,8 @@ class Diary extends React.Component {
   		document.getElementById("qual").style.color = newTextColor;
   		this.setState({newRoute:"profile"})
   		//console.log(avatar,newTextColor,newDiaryName)
-  		var link = "https://still-atoll-20251.herokuapp.com/profile/"+this.state.id
+  		// var link = "https://still-atoll-20251.herokuapp.com/profile/"+this.state.id
+		  var link = "http://localhost:3000/profile/"+this.state.id
   		fetch((link),{
 					method: "put",
 					headers: {'Content-Type':'application/json'},
@@ -173,7 +174,6 @@ class Diary extends React.Component {
 	 	
 	  console.log("Ka Ho")
 	  if ($("button").text()==="Light Mode"){
-	    console.log("hi");
 	    $( ".H1" ).addClass( "H1-Dark" );
 	    $( ".H2" ).addClass( "H2-Dark" );
 	    $( ".H3" ).addClass( "H3-Dark" );
@@ -189,7 +189,6 @@ class Diary extends React.Component {
 	    $( ".H2" ).removeClass( "H2-Dark" );
 	    $( "textarea" ).removeClass( "textarea-Dark" );
 	    $( ".profiles" ).removeClass( "profiles-dark" );
-	    console.log("Na ho")
 	}
   
 	 }
@@ -206,27 +205,31 @@ class Diary extends React.Component {
 	     	fav = false;
 	    }
 	    if (this.state.Month <= (new Date().getMonth()+1) && this.state.Year <=new Date().getFullYear() ){
-			console.log("yo")
 			var star = document.getElementById("favorite")
 			var content = star.textContent;
-			console.log(star,content)
 	    	var starDate = document.getElementsByClassName("H1")[0].innerHTML.slice(4,6);
+			console.log(starDate)
 		    if (starDate[0]==="0"){
 		        starDate = starDate[1]; 
 		    }
-		    if (content === "☆"){
-			    document.getElementById(starDate).classList.remove("fav")
-			    console.log(starDate)
-		    }
-		    else{
-		     	document.getElementById(starDate).classList.add("fav") 
-		    }
-		    document.getElementById(starDate).classList.add("save") 
-			document.getElementById(starDate).style.borderBottom = "5px solid #0c11a0"		
+			var dom = document.getElementById(starDate)
+			if(dom!=null){
+				if (content === "☆"){
+					dom.classList.remove("fav")
+					// console.log(starDate)
+				}
+				else{
+					 dom.classList.add("fav") 
+				}
+				dom.classList.add("save") 
+				dom.style.borderBottom = "5px solid #0c11a0"	
+			}
+		    
+		    	
 		}
 	  	const newtextContent = document.getElementById("qual").value;
-	  	console.log(fullDate,this.state.fav,newtextContent)
-	  	fetch("https://still-atoll-20251.herokuapp.com/textContent",{
+	  	// fetch("https://still-atoll-20251.herokuapp.com/textContent",{
+		fetch("http://localhost:3000/textContent",{
 						method: "post",
 						headers: {'Content-Type':'application/json'},
 						body: JSON.stringify({
@@ -273,9 +276,9 @@ class Diary extends React.Component {
 					<textarea id="qual"className="br3" maxLength="1100" defaultValue="Add Title"></textarea>
 					<h2 className="H1">{`${this.monthInText(this.state.Month)}`} 01, {`${this.state.Year}`} -<div className="dib stylechar"> &#128448;</div><div className="dib styleletter"> No Food</div><Emoji className="dib stylechar" symbol="💭" label="Comment" /> <div className="dib styleletter"> No Comment</div></h2>
 					<div className="H4"><Emoji className="cld" symbol="☁️" label="cloud" /><Emoji className="dib cloud" symbol="☁️" label="cloud" /></div>
-					<div id="emoji-dropdown" className="pointer "><div  className="dropdown grow"> <Emoji className="dropbtn" title="Add Emoji" symbol="😀" label="smiley" /><div className="dropdown-content">
+					{/* <div id="emoji-dropdown" className="pointer "><div  className="dropdown grow"> <Emoji className="dropbtn" title="Add Emoji" symbol="😀" label="smiley" /><div className="dropdown-content">
 						<EmojiList/>
-					</div></div></div>
+					</div></div></div> */}
 					<IconContext.Provider value={{  className: " pointer save-icon" }}>
 			            <div className="save-icon-container" onClick={this.saveText} >
 			              <GiSave />

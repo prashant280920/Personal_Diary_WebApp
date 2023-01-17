@@ -35,7 +35,8 @@ class Login extends React.Component {
 		const { name, email, password, diaryName } = this.state.signUp
 		if (email !== '' && password !== "" && name !== ''){
 			if (diaryName !== ""){
-				fetch("https://still-atoll-20251.herokuapp.com/signUp",{
+				// fetch("https://still-atoll-20251.herokuapp.com/signUp",{
+				fetch("http://localhost:3000/signUp",{
 					method: "post",
 					headers: {'Content-Type':'application/json'},
 					body: JSON.stringify({
@@ -66,15 +67,19 @@ class Login extends React.Component {
 	onSubmitSignIn = () => {
 		const { email, password} = this.state.signIn
 		if (email !== '' && password !== ""){
-			fetch("https://still-atoll-20251.herokuapp.com/signIn",{
+			// fetch("https://still-atoll-20251.herokuapp.com/signIn",{
+			fetch("http://localhost:3000/signIn",{
 					method: "post",
-					headers: {'Content-Type':'application/json'},
+					headers: {'Content-Type':'application/json',
+							"Access-Control-Allow-Credentials" : true,
+							"Access-Control-Allow-Origin" : "*",},
 					body: JSON.stringify({
 						email:this.state.signIn.email,
 						password:this.state.signIn.password
 					})
 				}).then(res => res.json())
 				.then(user => {
+					console.log(user)
 					if (user.id){
 						this.props.loadUser(user)
 						this.props.onRouteChange("home")		
