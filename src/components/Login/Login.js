@@ -36,7 +36,7 @@ class Login extends React.Component {
 		if (email !== '' && password !== "" && name !== ''){
 			if (diaryName !== ""){
 				// fetch("https://still-atoll-20251.herokuapp.com/signUp",{
-				fetch("http://localhost:3000/signUp",{
+				fetch("http://localhost:5000/signUp",{
 					method: "post",
 					headers: {'Content-Type':'application/json'},
 					body: JSON.stringify({
@@ -68,7 +68,7 @@ class Login extends React.Component {
 		const { email, password} = this.state.signIn
 		if (email !== '' && password !== ""){
 			// fetch("https://still-atoll-20251.herokuapp.com/signIn",{
-			fetch("http://localhost:3000/signIn",{
+			fetch("http://localhost:5000/signIn",{
 					method: "post",
 					headers: {'Content-Type':'application/json',
 							"Access-Control-Allow-Credentials" : true,
