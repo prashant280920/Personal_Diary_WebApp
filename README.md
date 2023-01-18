@@ -8,18 +8,20 @@ My attempt at making a decent interactive diary.
 
 **Note**:- This WebApp is only for laptop users. We are trying to make this fesible for Android users also. 
 
-### App is live at
-1. Deploy on GitHub - https://prashant280920.github.io/Personal_Diary_WebApp/
+# Glimps of UI
+![2023-01-18 (1)](https://user-images.githubusercontent.com/60234231/213196143-689803b3-ef0b-425f-b830-7b5e9e5960cc.png)
+![2023-01-18 (6)](https://user-images.githubusercontent.com/60234231/213196326-091d441e-8f0d-495c-b700-6197d7134d3b.png)
 
-### Hosted 
-* [Heroku](https://www.heroku.com/)
+[comment]: <> (### App is live at)
+[comment]: <> (1. Deploy on GitHub - https://prashant280920.github.io/Personal_Diary_WebApp/)
+
 
 ### Objective
 Want to make project using 
 * React.js
 * Node.js
 * Express.js framework
-* PostgreSQL
+* MySQL/PostgreSQL
 
 ### Required Features
 1. Users can signUp and signIn
@@ -64,19 +66,69 @@ Whole code of Backend present on [this](https://github.com/prashant280920/diaryA
 
 
 # Getting Started - Want To Contribute?
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Go ahead and fork the project.
 
-Download and Run the Project
+There are three parts to start the project locally
 
-### Installation 
+### Run Frontend - React App
+1. Fork this repo
 1. Clone the repo `https://github.com/prashant280920/Personal_Diary_WebApp.git`.
 2. Run `cd Personal_Diary_WebApp`.
 3. Install dependencies using npm - Run `npm install`.
+4. Run app using `npm start`. This will run the app on [localhost:3000](http://localhost:3000)
 
-### Running the App
-* Run `npm start`.
+### Run Database - MySQL server
+For storing data we have to use DataBase. I prefer to use MYSQL.
+1. Install Mysql in your machine [MySQL installer](https://dev.mysql.com/downloads/installer/). You can also folow any youtube link to install mysql and run mysql from cmd.
+2. Now open cmd and run `mysql -u root -p <password>`. Try to use "" empty password. This will run the MYSQL monitor.
+3. Now we have to cretae Database. Run `CREATE DATABASE diary_data`
+4. Now to use diary_data Database. Run `USE diary_data`;
+5. Now we have to create three table. Run the below three command to create 3 tables. Take care of spelling. Make sure use of lowecase and uppercase letter. As it may casue issue in server side. So you can just copy paste from here.
+```python
+CREATE TABLE login (
+   id serial PRIMARY KEY,
+   hash VARCHAR(100) NOT NULL,
+   email VARCHAR(100) UNIQUE NOT NULL
+  );
+```
+```python
+CREATE TABLE profile(
+   id serial PRIMARY KEY,
+   name VARCHAR(100),
+   email VARCHAR(100) UNIQUE NOT NULL,
+   diaryName VARCHAR(100),
+   Avatar VARCHAR(20) NOT NULL DEFAULT 'Women',
+   textColor VARCHAR(25) NOT NULL DEFAULT 'rgb(0, 0, 0)',
+   joined TIMESTAMP NOT NULL
+  );
+```
+```python
+CREATE TABLE userscontent (
+   id serial PRIMARY KEY,
+   email text NOT NULL,
+   textContent text NOT NULL,
+   dates DATE NOT NULL,
+   fav boolean
+  );
+```
+
+
+### Run Backend - Diary App server
+1. Fork [Diary App Server](https://github.com/prashant280920/diaryApp_server.git)
+2. Clone the repo `https://github.com/prashant280920/diaryApp_server.git`
+3. Navigate to directory using `cd diaryApp_server`
+4. Install dependencies using npm - Run `npm install`.
+5. Run app using `npm start`. This will run the app on [localhost:5000](http://localhost:5000)
+6. If you face issue like this. 
+![2023-01-16](https://user-images.githubusercontent.com/60234231/213192744-0af3ab66-a021-41e1-acfa-e913c9fddcfa.png)
+7. Then go to mysql server and run command also shown in figure below.
+```python 
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';
+```
+![2023-01-16 (2)](https://user-images.githubusercontent.com/60234231/213192419-6131e9ac-b796-47b2-a4a7-451676ac86b8.png)
+
 
 ### Want to Solve Issues
+
 Check [this](https://github.com/prashant280920/Personal_Diary_WebApp/issues) list.
 
-### Contributing
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**. Go ahead and fork the project.
