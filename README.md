@@ -8,7 +8,7 @@ My attempt at making a decent interactive diary.
 
 **Note**:- This WebApp is only for laptop users. We are trying to make this fesible for Android users also. 
 
-# Glimps of UI
+# Glimpse of UI
 ![2023-01-18 (1)](https://user-images.githubusercontent.com/60234231/213196143-689803b3-ef0b-425f-b830-7b5e9e5960cc.png)
 ![2023-01-18 (6)](https://user-images.githubusercontent.com/60234231/213196326-091d441e-8f0d-495c-b700-6197d7134d3b.png)
 
